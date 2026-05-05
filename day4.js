@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="day-objective-block">
         <h3>Objective of the day</h3>
         <p>
-          The team defines exactly what the AI agent will do: what triggers it, what data it reads,
-          what logic it applies, and what it recommends. This becomes the design specification
-          that the build team works from. No code is written on Day 4.
+          Define the complete design specification: the metrics the agent measures, the decision logic
+          it applies, the concepts and filters it uses, and the constraints it operates within.
+          Everything agreed today goes directly into the build brief. No code is written on Day 4.
         </p>
       </div>
 
@@ -20,9 +20,10 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="session-header">
             <div class="session-number">Session 1</div>
             <div>
-              <h3>Decision Logic Mapping</h3>
+              <h3>Metric Catalogue</h3>
               <p class="session-desc">
-                Define the complete logic of the selected decision, from trigger to output recommendation.
+                Define the metrics the use case depends on: what each metric measures, how it is
+                calculated, what it decomposes into, and which source columns feed it.
               </p>
             </div>
           </div>
@@ -31,21 +32,85 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="block">
               <h4>Objective</h4>
               <ul>
-                <li>Map the trigger: what event or condition initiates this decision.</li>
-                <li>Define the inputs: what data the agent reads at the point of decision.</li>
-                <li>Specify the evaluation logic: what rules, thresholds, and conditions the agent applies.</li>
-                <li>Define the output: what recommendation the agent produces and in what form.</li>
+                <li>List the 5 to 12 metrics the use case must compute or reference.</li>
+                <li>For each metric: name it, define its unit, set the direction (higher or lower is better), specify the dimensions it can be sliced by, and identify the source columns it draws from.</li>
+                <li>Define decompositions where one metric is the product of others: for example, OEE equals availability multiplied by performance multiplied by quality.</li>
+                <li>Assign a steward to each metric and confirm who signs off if the definition is disputed.</li>
               </ul>
             </div>
 
             <div class="block">
               <h4>Focus Questions</h4>
               <ul>
-                <li>What exactly triggers this decision: time-based, event-based, or threshold-based?</li>
-                <li>What data does the agent need to read at the moment of decision?</li>
-                <li>What constraints must the logic respect: safety limits, capacity ceilings, contractual terms, shift boundaries?</li>
-                <li>What does a correct recommendation look like? What does a wrong one look like?</li>
-                <li>Does the logic change depending on product type, machine state, or shift pattern?</li>
+                <li>What are the metrics this use case must be able to compute or display?</li>
+                <li>For each metric: what is its unit, and is higher or lower the right direction?</li>
+                <li>Which dimensions must each metric support: by plant, line, machine, shift, product?</li>
+                <li>Does any metric decompose into sub-metrics? For example, does OEE break into availability, performance, and quality?</li>
+                <li>Which source system and which columns or fields does each metric derive from?</li>
+                <li>Who is accountable for the definition and quality of each metric?</li>
+              </ul>
+            </div>
+
+            <div class="block">
+              <h4>Participants</h4>
+              <ul>
+                <li>Plant Manager</li>
+                <li>Process or Manufacturing Engineer</li>
+                <li>Finance Lead (for cost-based metrics)</li>
+                <li>Data Architect</li>
+                <li>Domain stewards from Day 3</li>
+              </ul>
+            </div>
+
+            <div class="block">
+              <h4>Accelerators</h4>
+              <ul>
+                <li>Metric catalogue template: name, description, unit, direction, dimensions, time windows, decomposition, source columns, steward.</li>
+                <li>Reference metric library for manufacturing: OEE, availability, performance, quality, downtime minutes, cost per unit, throughput, scrap rate, attendance rate.</li>
+                <li>Decomposition diagram reference showing common metric trees.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="output-box">
+            <h4>Session output</h4>
+            <ul>
+              <li>Metric catalogue: 5 to 12 metrics, each with name, unit, direction, dimensions, time windows, decomposition, source columns, and assigned steward.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="session">
+          <div class="session-header">
+            <div class="session-number">Session 2</div>
+            <div>
+              <h3>Decision Logic and Concepts</h3>
+              <p class="session-desc">
+                Define the logic the agent applies to reach a recommendation, and name the reusable
+                concepts, time windows, and operational filters the logic depends on.
+              </p>
+            </div>
+          </div>
+
+          <div class="session-grid">
+            <div class="block">
+              <h4>Objective</h4>
+              <ul>
+                <li>Map the decision logic: what triggers the agent, what metrics and data it reads, what rules it applies, what thresholds it uses, and what recommendation it produces.</li>
+                <li>Name the reusable concepts the logic depends on: time windows such as today, this shift, this week, and last 30 days; and operational filters such as unplanned downtime, night shift, or high-priority orders.</li>
+                <li>Define the predicate for each concept so it can be applied consistently across all queries and reports.</li>
+              </ul>
+            </div>
+
+            <div class="block">
+              <h4>Focus Questions</h4>
+              <ul>
+                <li>What exactly triggers this decision: a time threshold, an event, a metric crossing a limit?</li>
+                <li>Which metrics and entities does the agent read at the moment of decision?</li>
+                <li>What rules or thresholds does the logic apply? For example: if unplanned downtime exceeds 30 minutes, escalate.</li>
+                <li>What time windows does the logic compare against: this shift vs. last 30 days, this week vs. same week last year?</li>
+                <li>What operational filters matter: only unplanned events, only night shift, only orders above a certain value?</li>
+                <li>Do the concepts change depending on plant, product, or machine type?</li>
               </ul>
             </div>
 
@@ -55,77 +120,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 <li>Plant Manager</li>
                 <li>Production Lead or Line Manager</li>
                 <li>Planning or Scheduling Lead</li>
-                <li>Process Engineer (where applicable)</li>
-              </ul>
-            </div>
-
-            <div class="block">
-              <h4>Accelerators</h4>
-              <ul>
-                <li>Decision logic canvas (trigger, inputs, rules, thresholds, output).</li>
-                <li>Constraint identification guide for manufacturing decisions.</li>
-                <li>Common manufacturing decision logic patterns: prioritization, scheduling, allocation, substitution.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="output-box">
-            <h4>Session output</h4>
-            <ul>
-              <li>Decision logic diagram showing trigger, input data, evaluation rules, thresholds, and output recommendation.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="session">
-          <div class="session-header">
-            <div class="session-number">Session 2</div>
-            <div>
-              <h3>Data Product Definition</h3>
-              <p class="session-desc">
-                Specify the data products the decision agent needs, who owns them, and what
-                quality and freshness standards apply.
-              </p>
-            </div>
-          </div>
-
-          <div class="session-grid">
-            <div class="block">
-              <h4>Objective</h4>
-              <ul>
-                <li>Identify each data product the agent requires to execute its logic.</li>
-                <li>Define the schema, refresh frequency, and quality standard for each.</li>
-                <li>Clarify ownership and what happens when a data product is late, incomplete, or degraded.</li>
-              </ul>
-            </div>
-
-            <div class="block">
-              <h4>Focus Questions</h4>
-              <ul>
-                <li>What data products does the decision agent need to operate?</li>
-                <li>How fresh does each input need to be: real time, hourly, or daily?</li>
-                <li>Who is responsible for producing and maintaining each data product?</li>
-                <li>What happens to the agent's recommendation when a data product is unavailable or degraded?</li>
-                <li>Are any of these data products shared with other systems or use cases in the plant?</li>
-              </ul>
-            </div>
-
-            <div class="block">
-              <h4>Participants</h4>
-              <ul>
-                <li>IT or OT Lead</li>
+                <li>Process Engineer</li>
                 <li>Data Architect</li>
-                <li>Plant Systems Owner</li>
-                <li>Planning Lead (for scheduling and inventory data products)</li>
               </ul>
             </div>
 
             <div class="block">
               <h4>Accelerators</h4>
               <ul>
-                <li>Data product specification template (name, owner, schema, refresh rate, quality standard, failure handling).</li>
-                <li>Data product ownership matrix.</li>
-                <li>Freshness and SLA reference for manufacturing data.</li>
+                <li>Decision logic canvas: trigger, inputs, rules, thresholds, output recommendation.</li>
+                <li>Concept definition template: name, kind (time window or operational filter), predicate, applies-to columns.</li>
+                <li>Common manufacturing concept reference: today, this shift, this week, last 30 days, unplanned, night shift, weekend, high-priority.</li>
+                <li>Constraint identification guide for manufacturing decisions.</li>
               </ul>
             </div>
           </div>
@@ -133,7 +139,8 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="output-box">
             <h4>Session output</h4>
             <ul>
-              <li>Data product specification for each required input: name, owner, refresh frequency, schema, quality standard, and failure handling approach.</li>
+              <li>Decision logic diagram: trigger, input metrics, evaluation rules, thresholds, and output recommendation.</li>
+              <li>Concepts catalogue: named time windows and operational filters, each with a defined predicate and the columns it applies to.</li>
             </ul>
           </div>
         </div>
@@ -155,8 +162,8 @@ document.addEventListener('DOMContentLoaded', function () {
               <h4>Objective</h4>
               <ul>
                 <li>Define hard limits the agent must never exceed: safety thresholds, regulatory requirements, contract terms.</li>
-                <li>Specify which recommendations can be acted on directly and which require human review.</li>
-                <li>Design the approval workflow and escalation path for out-of-range recommendations.</li>
+                <li>Specify which recommendations can be acted on directly and which require human review before action.</li>
+                <li>Design the approval workflow and escalation path for out-of-range or low-confidence recommendations.</li>
               </ul>
             </div>
 
@@ -164,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function () {
               <h4>Focus Questions</h4>
               <ul>
                 <li>Which recommendations can the plant team act on immediately without additional approval?</li>
-                <li>What hard limits must the agent never exceed?</li>
+                <li>What hard limits must the agent never exceed: safety thresholds, regulatory requirements, contractual terms?</li>
                 <li>Who approves a recommendation that falls outside the normal operating range?</li>
                 <li>How does the approval process change during planned shutdowns, emergencies, or shift handover?</li>
                 <li>How should the agent behave when it has low confidence in its recommendation?</li>
@@ -194,7 +201,9 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="output-box">
             <h4>Session output</h4>
             <ul>
-              <li>Constraint register, approval workflow diagram, and override and fallback rules for all recommendation types.</li>
+              <li>Constraint register: hard limits, soft limits, and override conditions.</li>
+              <li>Approval workflow diagram: who approves what, at what threshold, through what channel.</li>
+              <li>Fallback rules: how the agent behaves when data is missing, stale, or confidence is below threshold.</li>
             </ul>
           </div>
         </div>
@@ -204,8 +213,8 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="end-day">
         <h3>End of Day 4 outputs</h3>
         <div class="end-day-grid">
-          <div class="end-card">Decision logic diagram (trigger to recommendation)</div>
-          <div class="end-card">Data product specifications for all required inputs</div>
+          <div class="end-card">Metric catalogue (5 to 12 metrics with source columns and stewards)</div>
+          <div class="end-card">Decision logic diagram and concepts catalogue</div>
           <div class="end-card">Constraint register and approval workflow</div>
           <div class="end-card">Full design specification ready for Day 5 validation</div>
         </div>

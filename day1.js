@@ -8,10 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="day-objective-block">
         <h3>Objective of the day</h3>
         <p>
-          Align on the operational and financial decisions that drive plant performance.
-          The focus is on where current decision-making breaks down: production scheduling,
-          maintenance response, order prioritization, and inventory management.
-          No solutions are proposed on Day 1.
+          Understand who makes what decisions, what their hardest daily questions are, and where the
+          current process breaks down across production, planning, maintenance, and order fulfillment.
+          No solutions are discussed on Day 1.
         </p>
       </div>
 
@@ -23,8 +22,8 @@ document.addEventListener('DOMContentLoaded', function () {
             <div>
               <h3>Operational Walkthrough</h3>
               <p class="session-desc">
-                Understand how manufacturing operations actually run across production,
-                planning, maintenance, and order fulfillment.
+                Walk through how the plant actually runs: order receipt to production to dispatch,
+                with real examples of what breaks down.
               </p>
             </div>
           </div>
@@ -33,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="block">
               <h4>Objective</h4>
               <ul>
-                <li>Walk through the order-to-production-to-dispatch flow.</li>
+                <li>Walk through the order-to-production-to-dispatch flow as it actually runs, not as the process diagram shows.</li>
                 <li>Discuss how shifts, machines, materials, and orders are managed day to day.</li>
                 <li>Identify delays, escalations, manual interventions, and informal workarounds.</li>
               </ul>
@@ -46,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <li>What happens when a machine goes down mid-shift?</li>
                 <li>How are orders prioritized when capacity is constrained?</li>
                 <li>How are material shortages handled in the moment?</li>
-                <li>Where do teams rely on phone calls, spreadsheets, or personal judgment?</li>
+                <li>Where do teams rely on phone calls, spreadsheets, or personal judgment rather than a system?</li>
               </ul>
             </div>
 
@@ -84,10 +83,10 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="session-header">
             <div class="session-number">Session 2</div>
             <div>
-              <h3>Decision Discovery</h3>
+              <h3>Stakeholder Personas and Decision Discovery</h3>
               <p class="session-desc">
-                Convert operational pain points into actual business decisions, each with a trigger,
-                an owner, known data inputs, and a measurable outcome.
+                Name the key roles involved in plant decisions, capture their hardest daily questions,
+                and convert pain points into decisions with owners, triggers, and outcomes.
               </p>
             </div>
           </div>
@@ -96,20 +95,20 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="block">
               <h4>Objective</h4>
               <ul>
-                <li>Take each friction point from the morning and ask: what decision is being made here?</li>
-                <li>Frame each decision with its trigger, owner, required inputs, and expected outcome.</li>
-                <li>Separate process steps from decisions where an AI agent could assist or recommend.</li>
+                <li>Name the three to five roles who own or influence manufacturing decisions at this plant.</li>
+                <li>For each role, capture the five questions they struggle most to answer on any given day, and how long it currently takes to get an answer.</li>
+                <li>Convert each struggle into a decision: what is decided, by whom, how often, and what it depends on.</li>
               </ul>
             </div>
 
             <div class="block">
               <h4>Focus Questions</h4>
               <ul>
-                <li>When something goes wrong, what decision is made and by whom?</li>
-                <li>Which decisions are made multiple times a day or per shift?</li>
-                <li>Which decisions pull data from more than one system?</li>
-                <li>Where do people override ERP or MES outputs?</li>
-                <li>Which decisions directly affect production volume, cost, or on-time delivery?</li>
+                <li>What is the hardest question you face at the start of your shift or day?</li>
+                <li>How long does it take you to answer it today, and where do you go for the answer?</li>
+                <li>Which decisions do you make multiple times a shift based on incomplete information?</li>
+                <li>Which decisions do you wish someone else could make faster or better?</li>
+                <li>Where do people override the ERP or MES because they do not trust the output?</li>
               </ul>
             </div>
 
@@ -117,9 +116,9 @@ document.addEventListener('DOMContentLoaded', function () {
               <h4>Participants</h4>
               <ul>
                 <li>Plant Manager</li>
-                <li>Production Supervisor or Line Manager</li>
+                <li>Maintenance Supervisor</li>
                 <li>Planning or Scheduling Lead</li>
-                <li>Maintenance Lead</li>
+                <li>Operations Director or Head (if available)</li>
                 <li>Supply Chain or Order Fulfillment Lead</li>
               </ul>
             </div>
@@ -127,9 +126,10 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="block">
               <h4>Accelerators</h4>
               <ul>
+                <li>Persona template: role, hardest questions, current answer time, decision types owned.</li>
                 <li>Decision inventory template (trigger, owner, inputs, outcome).</li>
-                <li>Pre-built set of manufacturing decision examples for reference.</li>
                 <li>Prompt cards to shift discussion from process view to decision view.</li>
+                <li>Example persona cards from similar manufacturing sites as reference.</li>
               </ul>
             </div>
           </div>
@@ -137,8 +137,8 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="output-box">
             <h4>Session output</h4>
             <ul>
-              <li>Initial inventory of 15 to 25 manufacturing decisions.</li>
-              <li>Each decision captured with: who decides, what triggers it, what data is needed, and what outcome is expected.</li>
+              <li>Three to five stakeholder persona profiles: role, five hard questions, current answer time per question, and decision types owned.</li>
+              <li>Initial inventory of 15 to 25 manufacturing decisions, each with owner, trigger, data inputs, and expected outcome.</li>
             </ul>
           </div>
         </div>
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
               <h4>Objective</h4>
               <ul>
                 <li>Group similar decisions, remove duplicates, and resolve overlaps.</li>
-                <li>Score decisions by operational impact, decision frequency, and urgency.</li>
+                <li>Score decisions by operational impact, frequency, urgency, and data dependency.</li>
                 <li>Flag decisions that cut across production, planning, and supply chain data domains.</li>
               </ul>
             </div>
@@ -211,10 +211,10 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="end-day">
         <h3>End of Day 1 outputs</h3>
         <div class="end-day-grid">
-          <div class="end-card">Operational flow and friction map</div>
-          <div class="end-card">Structured decision inventory (15 to 25 decisions)</div>
-          <div class="end-card">Shortlist of 5 to 7 high-impact decisions</div>
-          <div class="end-card">Prioritized input for Day 2 use case selection</div>
+          <div class="end-card">Stakeholder persona profiles with hard questions and answer times</div>
+          <div class="end-card">Operational friction map</div>
+          <div class="end-card">Decision inventory (15 to 25 decisions)</div>
+          <div class="end-card">Priority shortlist (5 to 7 decisions) for Day 2</div>
         </div>
       </div>
 

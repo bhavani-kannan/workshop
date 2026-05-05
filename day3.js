@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="day-objective-block">
         <h3>Objective of the day</h3>
         <p>
-          Before any design begins, the team maps what data actually exists across plant systems
-          and what access looks like in practice. Data gaps are surfaced here, when they are still
-          fixable, rather than mid-build when they become blockers.
+          Map the data landscape before any design begins. Identify the business sub-domains that
+          hold the data, sketch the key entities and their relationships, and surface access and quality
+          gaps that need resolving before the build phase starts.
         </p>
       </div>
 
@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="session-header">
             <div class="session-number">Session 1</div>
             <div>
-              <h3>System and Data Inventory</h3>
+              <h3>Domain Map</h3>
               <p class="session-desc">
-                Walk through every system and data source relevant to the selected decision.
-                Establish what data exists, where it lives, and who owns it.
+                Name the data sub-domains relevant to the selected use case, assign a business owner
+                and data steward to each, and map where the domains intersect.
               </p>
             </div>
           </div>
@@ -32,39 +32,41 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="block">
               <h4>Objective</h4>
               <ul>
-                <li>Identify every data system that touches the selected decision: ERP, MES, historian, CMMS, WMS, and manual logs.</li>
-                <li>Capture what data each system generates, at what frequency, and in what format.</li>
-                <li>Understand who manages each system and who controls data access.</li>
+                <li>Name the sub-domains that hold data relevant to the selected use case: for example, production (MES), calendar and shift (plant scheduler), maintenance (CMMS), workforce (HCM), and finance (ERP FI).</li>
+                <li>For each domain, identify the primary system, the business owner, and the data steward who is accountable for quality and access.</li>
+                <li>Determine which domains are in scope for the selected use case and which are out of scope or deferred.</li>
+                <li>Map the cross-domain relationships: which pairs of domains must be joined to answer the use case questions, and what entity links them.</li>
               </ul>
             </div>
 
             <div class="block">
               <h4>Focus Questions</h4>
               <ul>
-                <li>Which systems generate data that feeds into this decision today?</li>
-                <li>Is the data produced in real time, in daily batches, or entered manually?</li>
-                <li>Who owns each data source and who controls access permissions?</li>
-                <li>Is there a single source of truth, or do multiple systems hold conflicting versions of the same data?</li>
-                <li>Are there informal data sources such as shift logs, spreadsheets, or personal notebooks?</li>
+                <li>What are the named data domains in this plant? What does each one cover?</li>
+                <li>Who is the business owner of each domain? Who is accountable for data quality?</li>
+                <li>Which domains must be in scope to answer the use case questions?</li>
+                <li>Where do two domains need to be joined? For example, which production records relate to which shift, or which downtime event links to which cost posting?</li>
+                <li>Are there domains where the data exists but the system ownership is unclear or contested?</li>
               </ul>
             </div>
 
             <div class="block">
               <h4>Participants</h4>
               <ul>
+                <li>Chief Data Officer or Data Lead</li>
                 <li>IT or OT Lead</li>
-                <li>Data or Systems Architect</li>
-                <li>Plant Manager</li>
-                <li>Maintenance Lead (for CMMS and equipment data)</li>
+                <li>Plant Systems Owner</li>
+                <li>Finance Systems Lead (for cost domain)</li>
+                <li>HR or Workforce Lead (for labor domain)</li>
               </ul>
             </div>
 
             <div class="block">
               <h4>Accelerators</h4>
               <ul>
-                <li>Data source inventory template (system, owner, data type, frequency, current use).</li>
-                <li>Manufacturing system landscape reference covering ERP, MES, historian, CMMS, and WMS layers.</li>
-                <li>Common data domain list: production orders, machine states, inventory, quality, maintenance work orders.</li>
+                <li>Domain map template: sub-domain name, system, business owner, data steward, in/out of scope, notes.</li>
+                <li>Manufacturing domain reference: production, calendar, maintenance, workforce, finance, quality, inventory.</li>
+                <li>Cross-domain hot spot reference: common joins across manufacturing data domains.</li>
               </ul>
             </div>
           </div>
@@ -72,7 +74,8 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="output-box">
             <h4>Session output</h4>
             <ul>
-              <li>Inventory of all relevant data sources with system name, owner, data type, update frequency, format, and current use.</li>
+              <li>Domain map table: sub-domain name, system, business owner, data steward, in-scope for this use case, notes.</li>
+              <li>Cross-domain hot spot list: the specific entity joins that the use case depends on.</li>
             </ul>
           </div>
         </div>
@@ -81,10 +84,10 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="session-header">
             <div class="session-number">Session 2</div>
             <div>
-              <h3>Data Access and Quality Check</h3>
+              <h3>Entity Sketch and Data Access</h3>
               <p class="session-desc">
-                Assess what data is accessible in practice, how clean and consistent it is,
-                and whether it can support a decision agent reliably.
+                Sketch the key entities in each in-scope domain, assess what data is accessible and
+                how clean it is, and identify the bridges needed across domain boundaries.
               </p>
             </div>
           </div>
@@ -93,38 +96,40 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="block">
               <h4>Objective</h4>
               <ul>
-                <li>For each data source in the inventory, assess whether it can be accessed programmatically.</li>
-                <li>Evaluate data quality: completeness, consistency, historical depth, and known issues.</li>
-                <li>Classify each source as ready to use, accessible with preparation, or not accessible.</li>
+                <li>For each in-scope domain, name the root entities (shared reference data such as Resource, ReasonCode, ShiftPattern) and the domain-specific entities that hold operational records.</li>
+                <li>Sketch the key relationships: which entities link within a domain, and which require a bridge across domain lines.</li>
+                <li>Assess access and quality per entity: can it be queried programmatically, how complete is the history, and are there known quality issues.</li>
               </ul>
             </div>
 
             <div class="block">
               <h4>Focus Questions</h4>
               <ul>
-                <li>Can this data be extracted via an API or query, or does it require manual export?</li>
-                <li>How complete is the historical data and how far back does it go?</li>
-                <li>Are there known quality issues: missing values, duplicates, inconsistent units, or stale records?</li>
-                <li>Is the data structured and normalized, or does it require significant preparation?</li>
-                <li>Who needs to approve data access and how long does that typically take?</li>
+                <li>What are the core entities in each domain? For example: WorkOrder, ShiftInstance, MaintenanceEvent, Employee, CostCenter.</li>
+                <li>Which entities are shared across domains and serve as the join keys?</li>
+                <li>Can each entity be accessed via an API or query, or does it require a manual extract?</li>
+                <li>How far back does the history go for each entity? Is it sufficient for the use case?</li>
+                <li>Are there known gaps: missing values, inconsistent codes, duplicate records, or units that vary by plant?</li>
               </ul>
             </div>
 
             <div class="block">
               <h4>Participants</h4>
               <ul>
-                <li>IT or OT Lead</li>
                 <li>Data or Systems Architect</li>
+                <li>IT or OT Lead</li>
                 <li>Plant Systems Owner</li>
+                <li>Domain stewards identified in Session 1</li>
               </ul>
             </div>
 
             <div class="block">
               <h4>Accelerators</h4>
               <ul>
-                <li>Data access and quality scorecard.</li>
-                <li>Common data quality issue reference (manufacturing-specific).</li>
-                <li>Access request checklist and typical approval timeline reference.</li>
+                <li>Entity sketch template: entity name, domain, business key, surrogate key, key attributes, access method.</li>
+                <li>Root entity reference for manufacturing: Resource, ReasonCode, UnitOfMeasure, ShiftPattern, Product.</li>
+                <li>Data access and quality scorecard per entity.</li>
+                <li>Bridge pattern reference: how cross-domain joins are typically structured.</li>
               </ul>
             </div>
           </div>
@@ -132,7 +137,8 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="output-box">
             <h4>Session output</h4>
             <ul>
-              <li>Access and quality rating per data source: ready, accessible with preparation work, or not accessible.</li>
+              <li>Entity sketch per domain: root entities, domain entities, and the bridges that connect them across domains.</li>
+              <li>Access and quality rating per entity: ready, accessible with preparation, or not accessible.</li>
             </ul>
           </div>
         </div>
@@ -143,8 +149,8 @@ document.addEventListener('DOMContentLoaded', function () {
             <div>
               <h3>Gap Prioritization</h3>
               <p class="session-desc">
-                Identify which data gaps are critical to the decision logic and agree on
-                a resolution plan before design begins.
+                Identify which data and access gaps are critical to the use case and agree on
+                a resolution plan before the design phase begins.
               </p>
             </div>
           </div>
@@ -153,8 +159,8 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="block">
               <h4>Objective</h4>
               <ul>
-                <li>Classify each gap: blocking (prevents the decision from being made), manageable (reduces accuracy), or deferrable (low impact).</li>
-                <li>Agree on the resolution approach for each blocking gap: integration, data clean-up, proxy data, or manual input.</li>
+                <li>Classify each gap: blocking (prevents the use case from being delivered), manageable (reduces quality or coverage), or deferrable (low impact).</li>
+                <li>Agree on the resolution approach for each blocking gap: integration work, data clean-up, proxy data, or manual input.</li>
                 <li>Assign an owner and estimated timeline to each critical gap.</li>
               </ul>
             </div>
@@ -162,11 +168,11 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="block">
               <h4>Focus Questions</h4>
               <ul>
-                <li>Which gaps would prevent the agent from making this decision at all?</li>
-                <li>Which gaps reduce accuracy but do not stop the decision from being made?</li>
+                <li>Which gaps would prevent the agent from answering the use case questions at all?</li>
+                <li>Which gaps reduce answer quality but do not stop delivery?</li>
                 <li>Can any gaps be filled with proxy data or derived calculations?</li>
                 <li>What is the realistic time to resolve each critical gap?</li>
-                <li>Are there any gaps that require investment in new systems or integrations?</li>
+                <li>Are there gaps that require investment in new system integrations or data pipelines?</li>
               </ul>
             </div>
 
@@ -193,7 +199,8 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="output-box">
             <h4>Session output</h4>
             <ul>
-              <li>Gap register with priority classification, resolution approach, owner, and estimated timeline per gap.</li>
+              <li>Gap register: gap description, affected entity or domain, priority classification, resolution approach, owner, and estimated timeline.</li>
+              <li>Data readiness recommendation: ready to proceed, conditional, or not yet ready.</li>
             </ul>
           </div>
         </div>
@@ -203,8 +210,8 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="end-day">
         <h3>End of Day 3 outputs</h3>
         <div class="end-day-grid">
-          <div class="end-card">Data source inventory across all relevant plant systems</div>
-          <div class="end-card">Access and quality rating per source</div>
+          <div class="end-card">Domain map with sub-domains, owners, stewards, and cross-domain hot spots</div>
+          <div class="end-card">Entity sketch per domain with access and quality rating</div>
           <div class="end-card">Gap register with resolution plan and owners</div>
           <div class="end-card">Data readiness recommendation: ready, conditional, or not yet ready</div>
         </div>

@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="day-objective-block">
         <h3>Objective of the day</h3>
         <p>
-          The decision logic from Day 4 is tested against real plant scenarios before any code is written.
+          The design specification from Day 4 is tested against real plant scenarios before any code is written.
           Where the logic fails or produces the wrong recommendation, the team refines it on the spot.
-          The day closes with an agreed implementation roadmap and a clear definition of what gets built first.
+          The day closes with a formal sign-off on all workshop artefacts and an agreed implementation roadmap.
         </p>
       </div>
 
@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', function () {
             <div>
               <h3>Scenario Walkthrough</h3>
               <p class="session-desc">
-                Run the decision logic through four to five real plant scenarios. Capture where it
-                produces the right recommendation and where it falls short.
+                Run the decision logic and metric definitions through four to five real plant scenarios.
+                Capture where the design produces the right answer and where it falls short.
               </p>
             </div>
           </div>
@@ -32,9 +32,9 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="block">
               <h4>Objective</h4>
               <ul>
-                <li>Select four to five scenarios from actual plant history: a standard day, a machine breakdown, a material shortage, an urgent order conflict, and a multi-line capacity crunch.</li>
-                <li>Walk the logic through each scenario step by step using real or realistic data values.</li>
-                <li>Compare the logic output to what an experienced operator would actually decide.</li>
+                <li>Select four to five scenarios from actual plant history: a standard operating day, a machine breakdown, a material shortage, an urgent order conflict, and a multi-line capacity crunch.</li>
+                <li>Walk the metric calculations and decision logic through each scenario step by step using real or realistic data values.</li>
+                <li>Compare the agent output to what an experienced operator would actually decide or report.</li>
               </ul>
             </div>
 
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <li>What does the agent recommend when a machine breaks down mid-shift with open orders at risk?</li>
                 <li>How does it handle a material shortage where inventory data is only partially visible?</li>
                 <li>What recommendation does it produce when a high-priority order conflicts with a planned maintenance window?</li>
-                <li>Does the logic perform consistently across different product lines, machine groups, or shift patterns?</li>
+                <li>Do the metric values and time window concepts produce the expected numbers in each scenario?</li>
               </ul>
             </div>
 
@@ -63,8 +63,8 @@ document.addEventListener('DOMContentLoaded', function () {
               <h4>Accelerators</h4>
               <ul>
                 <li>Scenario cards: one per scenario, with realistic data values and plant context.</li>
-                <li>Decision output capture template (expected output, logic output, gap rating).</li>
-                <li>Facilitation guide for structured walkthrough sessions.</li>
+                <li>Decision output capture template (expected output, logic output, gap rating: pass, partial, or fail).</li>
+                <li>Metric traceability sheet linking each metric to its source columns and concepts.</li>
               </ul>
             </div>
           </div>
@@ -94,9 +94,9 @@ document.addEventListener('DOMContentLoaded', function () {
               <h4>Objective</h4>
               <ul>
                 <li>Work through each scenario that produced a partial or failed result.</li>
-                <li>Classify the root cause: a gap in the logic, a data gap, a missing constraint, or an incorrect assumption.</li>
-                <li>Refine the logic on the spot where possible. Log items that require additional design work.</li>
-                <li>Assign an overall confidence rating to the decision logic.</li>
+                <li>Classify the root cause: a gap in the decision logic, a metric definition gap, a missing concept, a data gap, or an incorrect assumption.</li>
+                <li>Refine the logic, metric, or concept on the spot where possible. Log items that require additional design work.</li>
+                <li>Assign an overall confidence rating to the full design specification.</li>
               </ul>
             </div>
 
@@ -104,10 +104,10 @@ document.addEventListener('DOMContentLoaded', function () {
               <h4>Focus Questions</h4>
               <ul>
                 <li>Which scenarios produced an unexpected or incorrect recommendation?</li>
-                <li>Is each failure caused by a logic gap, a data gap, a missing constraint, or an edge case?</li>
+                <li>Is each failure caused by a logic gap, a metric definition issue, a concept mismatch, or a data gap?</li>
                 <li>Which gaps can be resolved today and which need additional design work before build?</li>
-                <li>What is the team's confidence that this logic will perform reliably on the plant floor?</li>
                 <li>Are there high-risk scenarios that have not yet been tested?</li>
+                <li>What is the team's confidence that this design will perform reliably on the plant floor?</li>
               </ul>
             </div>
 
@@ -118,6 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <li>IT or OT Lead</li>
                 <li>Planning Lead</li>
                 <li>Process Engineer</li>
+                <li>Data Architect</li>
               </ul>
             </div>
 
@@ -126,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
               <ul>
                 <li>Gap resolution matrix (gap type, resolution approach, owner, timeline).</li>
                 <li>Confidence rating framework by scenario and overall.</li>
-                <li>Logic refinement log.</li>
+                <li>Logic and metric refinement log.</li>
               </ul>
             </div>
           </div>
@@ -134,7 +135,8 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="output-box">
             <h4>Session output</h4>
             <ul>
-              <li>Refined decision logic with documented gaps and resolution plan.</li>
+              <li>Refined decision logic and updated metric catalogue with documented changes.</li>
+              <li>Gap resolution plan: each open item with owner and estimated resolution date.</li>
               <li>Overall confidence rating: high, medium, or conditional.</li>
             </ul>
           </div>
@@ -144,10 +146,10 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="session-header">
             <div class="session-number">Session 3</div>
             <div>
-              <h3>Implementation Planning</h3>
+              <h3>Implementation Planning and Sign-off</h3>
               <p class="session-desc">
-                Agree on what gets built, in what sequence, who is responsible, and what defines
-                a successful first delivery.
+                Agree on what gets built, in what sequence, and who is responsible. Formally confirm
+                each workshop artefact, document open issues, and set the build phase start date.
               </p>
             </div>
           </div>
@@ -158,8 +160,8 @@ document.addEventListener('DOMContentLoaded', function () {
               <ul>
                 <li>Define the minimum viable scope for Phase 1: what gets built first and what gets deferred.</li>
                 <li>Map the dependencies between IBM deliverables and client deliverables: data access, approvals, team availability.</li>
-                <li>Define the first milestone and agree on what success looks like when it is reached.</li>
-                <li>Agree on the two or three risks most likely to affect delivery.</li>
+                <li>Walk through the workshop artefact list and confirm each one is approved by the accountable stakeholder.</li>
+                <li>Document open issues with owners and resolution dates. Agree on the build phase start date.</li>
               </ul>
             </div>
 
@@ -169,14 +171,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 <li>What is the minimum viable scope for the first build phase?</li>
                 <li>Which data products and system integrations must be in place before build starts?</li>
                 <li>What does the client team need to deliver before the IBM team can proceed?</li>
-                <li>What does a successful first milestone look like, and how is it measured?</li>
-                <li>What are the top two or three risks to the delivery timeline?</li>
+                <li>Is each workshop artefact confirmed as approved by the right person?</li>
+                <li>What open issues remain, who owns them, and by when must they be resolved?</li>
+                <li>What date does the build phase start?</li>
               </ul>
             </div>
 
             <div class="block">
               <h4>Participants</h4>
               <ul>
+                <li>Executive Sponsor</li>
                 <li>Plant Manager</li>
                 <li>Operations Head</li>
                 <li>IT or OT Lead</li>
@@ -189,8 +193,8 @@ document.addEventListener('DOMContentLoaded', function () {
               <ul>
                 <li>Implementation planning template.</li>
                 <li>Dependency map (IBM deliverables vs. client deliverables).</li>
-                <li>Milestone definition guide.</li>
-                <li>Risk register starter.</li>
+                <li>Workshop artefact sign-off checklist (artefact, confirmed by, date).</li>
+                <li>Open issues register with owner and resolution date fields.</li>
               </ul>
             </div>
           </div>
@@ -198,7 +202,10 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="output-box">
             <h4>Session output</h4>
             <ul>
-              <li>Implementation roadmap with Phase 1 scope, build sequence, client dependencies, milestone definition, success metrics, and risk log.</li>
+              <li>Implementation roadmap with Phase 1 scope, build sequence, client dependencies, success metrics, and risk log.</li>
+              <li>Signed-off artefact register: each workshop artefact confirmed by its accountable stakeholder.</li>
+              <li>Open issues log with owner, resolution date, and impact if unresolved.</li>
+              <li>Agreed build phase start date and first milestone definition.</li>
             </ul>
           </div>
         </div>
@@ -209,9 +216,9 @@ document.addEventListener('DOMContentLoaded', function () {
         <h3>End of Day 5 outputs</h3>
         <div class="end-day-grid">
           <div class="end-card">Validated scenarios with confidence rating</div>
-          <div class="end-card">Refined decision logic with gap resolutions</div>
+          <div class="end-card">Refined design specification (logic, metrics, concepts)</div>
           <div class="end-card">Implementation roadmap with Phase 1 milestones</div>
-          <div class="end-card">Agreed definition of done and success metrics</div>
+          <div class="end-card">Signed-off artefact register and open issues log</div>
         </div>
       </div>
 

@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="day-objective-block">
         <h3>Objective of the day</h3>
         <p>
-          The shortlist from Day 1 gets tested against practical criteria. Each decision is scored
-          on operational impact, how often it is made, and whether the data needed is likely accessible.
-          By end of day, the team agrees on one use case to carry into the design phase.
+          The shortlist from Day 1 is tested against practical criteria and narrowed to one use case.
+          That use case is then formally defined: what questions it answers, what dimensions it cuts across,
+          what time windows it covers, and what a good outcome looks like.
         </p>
       </div>
 
@@ -144,10 +144,10 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="session-header">
             <div class="session-number">Session 3</div>
             <div>
-              <h3>Use Case Selection</h3>
+              <h3>Use Case Selection and Definition</h3>
               <p class="session-desc">
-                Reach agreement on one use case and define exactly what the AI agent is expected
-                to decide, how often, and for whom.
+                Agree on one use case, name the persona it serves, and formally define it: what questions
+                it answers, what dimensions it cuts across, what time windows it covers, and what a good outcome looks like.
               </p>
             </div>
           </div>
@@ -156,9 +156,11 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="block">
               <h4>Objective</h4>
               <ul>
-                <li>Reach explicit agreement in the room on the selected use case.</li>
-                <li>Define the decision scope: what is decided, by whom, how often, and what outcome it optimizes.</li>
-                <li>Name the two or three risks the team is accepting by choosing this use case over others.</li>
+                <li>Reach explicit agreement on the selected use case.</li>
+                <li>Define which persona it primarily serves and what three to five specific questions it answers.</li>
+                <li>Specify the dimensions it must support: by plant, by line, by machine, by shift, by product family.</li>
+                <li>Specify the time windows it must cover: today, this shift, this week, last 30 days, last quarter.</li>
+                <li>Define what a good outcome looks like: the answer format, the decision it enables, and the success metric.</li>
               </ul>
             </div>
 
@@ -166,10 +168,11 @@ document.addEventListener('DOMContentLoaded', function () {
               <h4>Focus Questions</h4>
               <ul>
                 <li>Is there full agreement in the room on the selected use case?</li>
-                <li>Who is the single named owner for this use case from the client side?</li>
+                <li>Which persona does this use case serve first, and what specific questions does it answer for them?</li>
+                <li>At what level does the answer need to be available: plant, area, line, machine, shift?</li>
+                <li>What time windows matter most: real time, daily, weekly, or trend-based?</li>
+                <li>What does a good answer look like? A number, a ranked list, a recommendation, or a comparison?</li>
                 <li>What does success look like at 30 days, 90 days, and 6 months?</li>
-                <li>What are we accepting as risks by choosing this one over the alternatives?</li>
-                <li>What does the client team need to prepare before Day 3?</li>
               </ul>
             </div>
 
@@ -186,9 +189,10 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="block">
               <h4>Accelerators</h4>
               <ul>
-                <li>Use case definition template (what is decided, trigger, inputs, output, owner).</li>
-                <li>Decision framing canvas.</li>
+                <li>Use case definition canvas (persona, questions answered, dimensions, time windows, outcome format).</li>
+                <li>Dimension and window reference list for manufacturing use cases.</li>
                 <li>Risk acceptance log.</li>
+                <li>Example use case definitions from comparable manufacturing sites.</li>
               </ul>
             </div>
           </div>
@@ -196,8 +200,11 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="output-box">
             <h4>Session output</h4>
             <ul>
-              <li>Agreed use case statement with decision scope, named owner, and success criteria.</li>
-              <li>Documented risks accepted by the team in selecting this use case.</li>
+              <li>Selected use case with named owner and primary persona.</li>
+              <li>Defined question list (3 to 5 specific questions the use case answers).</li>
+              <li>Dimension list: the grouping levels the answer must support.</li>
+              <li>Time window list: the look-back and look-forward periods the answer must cover.</li>
+              <li>Agreed outcome format and success criteria.</li>
             </ul>
           </div>
         </div>
@@ -208,9 +215,9 @@ document.addEventListener('DOMContentLoaded', function () {
         <h3>End of Day 2 outputs</h3>
         <div class="end-day-grid">
           <div class="end-card">Scored use case matrix</div>
-          <div class="end-card">Selected use case with rationale</div>
-          <div class="end-card">Decision scope definition and named owner</div>
-          <div class="end-card">Agreed success criteria and risk log</div>
+          <div class="end-card">Selected use case with named owner and persona</div>
+          <div class="end-card">Use case definition: questions, dimensions, time windows</div>
+          <div class="end-card">Agreed success criteria and accepted risk log</div>
         </div>
       </div>
 
