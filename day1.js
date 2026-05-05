@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <div>
               <h3>Operational Walkthrough</h3>
               <p class="session-desc">
-                Walk through how the plant actually runs: order receipt to production to dispatch,
+                Understand how the plant actually runs: order receipt to production to dispatch,
                 with real examples of what breaks down.
               </p>
             </div>
