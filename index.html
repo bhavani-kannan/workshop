@@ -21,7 +21,7 @@
     </p>
 
     <div class="workshop-promise">
-      <h2>What the client walks away with</h2>
+      <h2>Five days. Five deliverables.</h2>
       <p>
         Each day produces a concrete output: a decision backlog, a selected use case, a data
         readiness assessment, a decision model, and a validated implementation path.
@@ -31,9 +31,7 @@
 
     <div class="accordion">
 
-      <!-- ============================================================
-           DAY 1 - Full detail loaded from day1.js
-           ============================================================ -->
+      <!-- DAY 1 -->
       <details open>
         <summary>
           <div class="summary-meta">
@@ -48,18 +46,14 @@
           </div>
           <div class="summary-outcomes">
             <div class="outcome-chip">Operational friction map</div>
-            <div class="outcome-chip">Decision inventory (15-25 decisions)</div>
-            <div class="outcome-chip">Priority shortlist (5-7 decisions)</div>
+            <div class="outcome-chip">Decision inventory (15 to 25 decisions)</div>
+            <div class="outcome-chip">Priority shortlist (5 to 7 decisions)</div>
           </div>
         </summary>
-
-        <!-- Day 1 body is injected by day1.js -->
         <div id="day1-body"></div>
       </details>
 
-      <!-- ============================================================
-           DAY 2 - Light structured content
-           ============================================================ -->
+      <!-- DAY 2 -->
       <details>
         <summary>
           <div class="summary-meta">
@@ -73,61 +67,15 @@
             </div>
           </div>
           <div class="summary-outcomes">
-            <div class="outcome-chip">Scored use case list</div>
+            <div class="outcome-chip">Scored use case matrix</div>
             <div class="outcome-chip">Selected use case</div>
             <div class="outcome-chip">Selection rationale</div>
           </div>
         </summary>
-
-        <div class="day-light">
-          <div class="day-objective-block">
-            <h3>Objective of the day</h3>
-            <p>
-              The shortlist from Day 1 gets tested against practical criteria. Each decision is scored
-              on operational impact, decision frequency, and the likelihood that the required data is
-              available and accessible. By end of day, one use case is selected to carry forward.
-            </p>
-          </div>
-
-          <div class="session-list">
-            <div class="session-list-item">
-              <div class="session-list-number">Session 1</div>
-              <div class="session-list-text">
-                <strong>Use Case Scoring</strong>
-                <span>Score each shortlisted decision against a structured criteria set covering impact, frequency, and data access.</span>
-              </div>
-            </div>
-            <div class="session-list-item">
-              <div class="session-list-number">Session 2</div>
-              <div class="session-list-text">
-                <strong>Stakeholder Validation</strong>
-                <span>Review the top two or three candidates with operations and IT leads. Surface concerns about feasibility or priority.</span>
-              </div>
-            </div>
-            <div class="session-list-item">
-              <div class="session-list-number">Session 3</div>
-              <div class="session-list-text">
-                <strong>Use Case Selection</strong>
-                <span>Agree on one use case and document what the agent is expected to decide, how often, and for whom.</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="end-day">
-            <h3>End of Day 2 outputs</h3>
-            <div class="end-day-grid">
-              <div class="end-card">Scored use case matrix</div>
-              <div class="end-card">Selected use case with rationale</div>
-              <div class="end-card">Definition of what the agent decides</div>
-              <div class="end-card">Agreed scope for Day 3</div>
-            </div>
-          </div>
-        </div>
+        <div id="day2-body"></div>
       </details>
 
-      <!-- ============================================================
-           DAY 3 - Light structured content
-           ============================================================ -->
+      <!-- DAY 3 -->
       <details>
         <summary>
           <div class="summary-meta">
@@ -142,60 +90,14 @@
           </div>
           <div class="summary-outcomes">
             <div class="outcome-chip">Data source inventory</div>
-            <div class="outcome-chip">Gap assessment</div>
-            <div class="outcome-chip">Readiness rating</div>
+            <div class="outcome-chip">Gap register</div>
+            <div class="outcome-chip">Readiness recommendation</div>
           </div>
         </summary>
-
-        <div class="day-light">
-          <div class="day-objective-block">
-            <h3>Objective of the day</h3>
-            <p>
-              Before any design begins, the team maps what data actually exists, which systems it lives in,
-              and what access looks like in practice. This session surfaces gaps early, before they become
-              blockers in the build phase.
-            </p>
-          </div>
-
-          <div class="session-list">
-            <div class="session-list-item">
-              <div class="session-list-number">Session 1</div>
-              <div class="session-list-text">
-                <strong>System and Data Inventory</strong>
-                <span>Walk through the ERP, MES, historian, and operational data sources relevant to the selected decision.</span>
-              </div>
-            </div>
-            <div class="session-list-item">
-              <div class="session-list-number">Session 2</div>
-              <div class="session-list-text">
-                <strong>Data Access and Quality Check</strong>
-                <span>Assess what is accessible, in what format, at what frequency, and where quality is unreliable.</span>
-              </div>
-            </div>
-            <div class="session-list-item">
-              <div class="session-list-number">Session 3</div>
-              <div class="session-list-text">
-                <strong>Gap Prioritization</strong>
-                <span>Rank data gaps by their impact on the decision. Identify which need resolution before build and which can be deferred.</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="end-day">
-            <h3>End of Day 3 outputs</h3>
-            <div class="end-day-grid">
-              <div class="end-card">Inventory of data sources and systems</div>
-              <div class="end-card">Access and quality assessment</div>
-              <div class="end-card">Ranked gap list with recommendations</div>
-              <div class="end-card">Data readiness rating for the use case</div>
-            </div>
-          </div>
-        </div>
+        <div id="day3-body"></div>
       </details>
 
-      <!-- ============================================================
-           DAY 4 - Light structured content
-           ============================================================ -->
+      <!-- DAY 4 -->
       <details>
         <summary>
           <div class="summary-meta">
@@ -209,61 +111,15 @@
             </div>
           </div>
           <div class="summary-outcomes">
-            <div class="outcome-chip">Decision logic map</div>
+            <div class="outcome-chip">Decision logic diagram</div>
             <div class="outcome-chip">Data product scope</div>
             <div class="outcome-chip">Constraint and approval rules</div>
           </div>
         </summary>
-
-        <div class="day-light">
-          <div class="day-objective-block">
-            <h3>Objective of the day</h3>
-            <p>
-              The team defines exactly what the AI agent will do: what data it draws on, what logic it
-              applies, what it recommends, and where human review is required. This becomes the design
-              specification for the build phase.
-            </p>
-          </div>
-
-          <div class="session-list">
-            <div class="session-list-item">
-              <div class="session-list-number">Session 1</div>
-              <div class="session-list-text">
-                <strong>Decision Logic Mapping</strong>
-                <span>Define the inputs, evaluation logic, thresholds, and outputs of the selected decision end to end.</span>
-              </div>
-            </div>
-            <div class="session-list-item">
-              <div class="session-list-number">Session 2</div>
-              <div class="session-list-text">
-                <strong>Data Product Definition</strong>
-                <span>Specify what data products are needed to feed the decision reliably: what they contain, how often they refresh, and who owns them.</span>
-              </div>
-            </div>
-            <div class="session-list-item">
-              <div class="session-list-number">Session 3</div>
-              <div class="session-list-text">
-                <strong>Constraint and Approval Design</strong>
-                <span>Define operating limits, override conditions, escalation paths, and who approves which recommendations.</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="end-day">
-            <h3>End of Day 4 outputs</h3>
-            <div class="end-day-grid">
-              <div class="end-card">Decision logic diagram</div>
-              <div class="end-card">Data product specification</div>
-              <div class="end-card">Constraint and approval rules</div>
-              <div class="end-card">Design input for Day 5 validation</div>
-            </div>
-          </div>
-        </div>
+        <div id="day4-body"></div>
       </details>
 
-      <!-- ============================================================
-           DAY 5 - Light structured content
-           ============================================================ -->
+      <!-- DAY 5 -->
       <details>
         <summary>
           <div class="summary-meta">
@@ -279,59 +135,19 @@
           <div class="summary-outcomes">
             <div class="outcome-chip">Validated scenarios</div>
             <div class="outcome-chip">Confidence rating</div>
-            <div class="outcome-chip">Implementation path</div>
+            <div class="outcome-chip">Implementation roadmap</div>
           </div>
         </summary>
-
-        <div class="day-light">
-          <div class="day-objective-block">
-            <h3>Objective of the day</h3>
-            <p>
-              The decision logic defined on Day 4 is tested against real plant scenarios drawn from
-              operational history. Gaps in the logic are surfaced and resolved. The team agrees on
-              what gets built, in what order, and what a successful first milestone looks like.
-            </p>
-          </div>
-
-          <div class="session-list">
-            <div class="session-list-item">
-              <div class="session-list-number">Session 1</div>
-              <div class="session-list-text">
-                <strong>Scenario Walkthrough</strong>
-                <span>Run the decision logic through four to five real scenarios: machine breakdown, material shortage, delayed order, capacity crunch, and shift handover.</span>
-              </div>
-            </div>
-            <div class="session-list-item">
-              <div class="session-list-number">Session 2</div>
-              <div class="session-list-text">
-                <strong>Gap Resolution and Confidence Rating</strong>
-                <span>Capture what the logic handles well and what needs refinement. Assign a confidence rating per scenario.</span>
-              </div>
-            </div>
-            <div class="session-list-item">
-              <div class="session-list-number">Session 3</div>
-              <div class="session-list-text">
-                <strong>Implementation Planning</strong>
-                <span>Define the build sequence, dependencies, team responsibilities, and the first delivery milestone with a clear definition of done.</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="end-day">
-            <h3>End of Day 5 outputs</h3>
-            <div class="end-day-grid">
-              <div class="end-card">Scenario test results and confidence rating</div>
-              <div class="end-card">Refined decision logic</div>
-              <div class="end-card">Implementation roadmap</div>
-              <div class="end-card">Agreed definition of done for Phase 1</div>
-            </div>
-          </div>
-        </div>
+        <div id="day5-body"></div>
       </details>
 
     </div>
   </div>
 
   <script src="day1.js" defer></script>
+  <script src="day2.js" defer></script>
+  <script src="day3.js" defer></script>
+  <script src="day4.js" defer></script>
+  <script src="day5.js" defer></script>
 </body>
 </html>

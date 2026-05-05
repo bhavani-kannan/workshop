@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
       <div class="sessions">
 
-        <!-- Session 1 -->
         <div class="session">
           <div class="session-header">
             <div class="session-number">Session 1</div>
@@ -32,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
           <div class="session-grid">
             <div class="block">
-              <h4>What happens in the room</h4>
+              <h4>Objective</h4>
               <ul>
                 <li>Walk through the order-to-production-to-dispatch flow.</li>
                 <li>Discuss how shifts, machines, materials, and orders are managed day to day.</li>
@@ -41,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
 
             <div class="block">
-              <h4>Key questions</h4>
+              <h4>Focus Questions</h4>
               <ul>
                 <li>How does a production plan get created and executed?</li>
                 <li>What happens when a machine goes down mid-shift?</li>
@@ -52,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
 
             <div class="block">
-              <h4>Stakeholders in the room</h4>
+              <h4>Participants</h4>
               <ul>
                 <li>Plant Manager</li>
                 <li>Production Supervisor or Line Manager</li>
@@ -63,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
 
             <div class="block">
-              <h4>Assets brought in</h4>
+              <h4>Accelerators</h4>
               <ul>
                 <li>Manufacturing process reference flow (order to dispatch).</li>
                 <li>Industry prompts for downtime, scheduling conflicts, shortages, and dispatch delays.</li>
@@ -81,7 +80,6 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
         </div>
 
-        <!-- Session 2 -->
         <div class="session">
           <div class="session-header">
             <div class="session-number">Session 2</div>
@@ -96,16 +94,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
           <div class="session-grid">
             <div class="block">
-              <h4>What happens in the room</h4>
+              <h4>Objective</h4>
               <ul>
-                <li>Take each friction point identified in the morning and ask: what decision is being made here?</li>
+                <li>Take each friction point from the morning and ask: what decision is being made here?</li>
                 <li>Frame each decision with its trigger, owner, required inputs, and expected outcome.</li>
                 <li>Separate process steps from decisions where an AI agent could assist or recommend.</li>
               </ul>
             </div>
 
             <div class="block">
-              <h4>Key questions</h4>
+              <h4>Focus Questions</h4>
               <ul>
                 <li>When something goes wrong, what decision is made and by whom?</li>
                 <li>Which decisions are made multiple times a day or per shift?</li>
@@ -116,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
 
             <div class="block">
-              <h4>Stakeholders in the room</h4>
+              <h4>Participants</h4>
               <ul>
                 <li>Plant Manager</li>
                 <li>Production Supervisor or Line Manager</li>
@@ -127,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
 
             <div class="block">
-              <h4>Assets brought in</h4>
+              <h4>Accelerators</h4>
               <ul>
                 <li>Decision inventory template (trigger, owner, inputs, outcome).</li>
                 <li>Pre-built set of manufacturing decision examples for reference.</li>
@@ -145,7 +143,6 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
         </div>
 
-        <!-- Session 3 -->
         <div class="session">
           <div class="session-header">
             <div class="session-number">Session 3</div>
@@ -159,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
           <div class="session-grid">
             <div class="block">
-              <h4>What happens in the room</h4>
+              <h4>Objective</h4>
               <ul>
                 <li>Group similar decisions, remove duplicates, and resolve overlaps.</li>
                 <li>Score decisions by operational impact, decision frequency, and urgency.</li>
@@ -168,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
 
             <div class="block">
-              <h4>Key questions</h4>
+              <h4>Focus Questions</h4>
               <ul>
                 <li>Which decisions cause the most production delays or financial losses?</li>
                 <li>Which decisions happen daily, per shift, or weekly?</li>
@@ -179,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
 
             <div class="block">
-              <h4>Stakeholders in the room</h4>
+              <h4>Participants</h4>
               <ul>
                 <li>Plant Manager</li>
                 <li>Operations Head (if available)</li>
@@ -190,10 +187,10 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
 
             <div class="block">
-              <h4>Assets brought in</h4>
+              <h4>Accelerators</h4>
               <ul>
-                <li>Prioritization matrix (impact x frequency x urgency).</li>
-                <li>Benchmark reference: common high-impact decisions from similar manufacturing sites.</li>
+                <li>Prioritization matrix (impact, frequency, urgency).</li>
+                <li>Benchmark reference: high-impact decisions from similar manufacturing sites.</li>
                 <li>Scoring prompts covering revenue loss, unplanned downtime, missed delivery, and cost leakage.</li>
               </ul>
             </div>
