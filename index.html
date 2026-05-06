@@ -30,6 +30,29 @@
       </div>
     </div>
 
+    <!-- Pre-workshop readiness section -->
+    <div class="pre-workshop-section" id="pre-workshop-section">
+      <div class="pre-workshop-header" role="button" aria-expanded="false" aria-controls="pre-workshop-body" tabindex="0">
+        <div class="pre-workshop-header-text">
+          <h2>Pre-Workshop Preparation</h2>
+          <p>
+            The quality of the five-day workshop is determined before Day 1 begins.
+            This phase defines what the client provides, what each stakeholder prepares,
+            what IBM pre-populates, and the readiness gate that must be passed before the workshop proceeds.
+          </p>
+        </div>
+        <div class="pre-workshop-chips">
+          <div class="pre-workshop-chip">Required client artifacts</div>
+          <div class="pre-workshop-chip">Mandatory pre-work templates</div>
+          <div class="pre-workshop-chip">Stakeholder preparation</div>
+          <div class="pre-workshop-chip">Facilitator preparation</div>
+          <div class="pre-workshop-chip">Go / No-Go readiness gate</div>
+        </div>
+        <span class="pw-chevron"></span>
+      </div>
+      <div id="pre-workshop-body"></div>
+    </div>
+
     <!-- Tab navigation -->
     <div class="tab-nav" id="tab-nav" role="tablist">
 
@@ -47,7 +70,7 @@
 
       <button class="tab-btn" data-panel="panel-day3" role="tab" aria-selected="false" aria-controls="panel-day3">
         <span class="tab-day-label">Day 3</span>
-        <span class="tab-day-title">Map Data Domains, Entities, and Gaps</span>
+        <span class="tab-day-title">Map Data Ownership, Availability, and Gaps</span>
         <span class="tab-session-count">3 sessions</span>
       </button>
 
@@ -94,11 +117,11 @@
     <!-- Day 3 panel -->
     <div class="tab-panel" id="panel-day3" role="tabpanel">
       <div class="panel-header">
-        <span class="panel-tagline">Map the data sub-domains, sketch the key entities, and surface gaps before design begins.</span>
+        <span class="panel-tagline">Confirm who owns each data source, what is accessible, and what gaps must be resolved before design begins.</span>
         <div class="panel-chips">
-          <div class="outcome-chip">Domain map with owners and MES-to-ERP flow gaps</div>
-          <div class="outcome-chip">Entity sketch, gap register, and readiness rating</div>
-          <div class="outcome-chip">Signed data contract with confirmed system inventory</div>
+          <div class="outcome-chip">Data ownership map with owners and MES-to-ERP flow gaps</div>
+          <div class="outcome-chip">Data availability assessment, gap register, and readiness rating</div>
+          <div class="outcome-chip">Signed data commitment with confirmed system inventory</div>
         </div>
       </div>
       <div id="day3-body"></div>
@@ -107,11 +130,11 @@
     <!-- Day 4 panel -->
     <div class="tab-panel" id="panel-day4" role="tabpanel">
       <div class="panel-header">
-        <span class="panel-tagline">Define the metric catalogue, the decision logic, the concepts layer, and the operating limits.</span>
+        <span class="panel-tagline">Define what is measured, how the agent makes decisions, who stays in control, and what it must never do.</span>
         <div class="panel-chips">
           <div class="outcome-chip">Metric catalogue with baselines and calculation logic</div>
-          <div class="outcome-chip">Decision logic, HITL classification, and audit spec</div>
-          <div class="outcome-chip">Constraints, guardrails, and draft executive brief</div>
+          <div class="outcome-chip">Decision rules, human oversight classification, and audit requirements</div>
+          <div class="outcome-chip">Operating limits, approval rules, and draft executive brief</div>
         </div>
       </div>
       <div id="day4-body"></div>
@@ -132,6 +155,7 @@
 
   </div>
 
+  <script src="pre-workshop.js" defer></script>
   <script src="day1.js" defer></script>
   <script src="day2.js" defer></script>
   <script src="day3.js" defer></script>
@@ -186,6 +210,37 @@
           prev.focus();
         }
       });
+
+      // Pre-workshop section collapse toggle
+      var pwSection = document.getElementById('pre-workshop-section');
+      var pwHeader  = pwSection ? pwSection.querySelector('.pre-workshop-header') : null;
+      var pwBody    = document.getElementById('pre-workshop-body');
+
+      if (pwHeader && pwBody) {
+        pwHeader.addEventListener('click', function () {
+          if (pwSection.classList.contains('open')) {
+            pwBody.style.height = pwBody.scrollHeight + 'px';
+            pwBody.offsetHeight;
+            pwBody.style.height = '0';
+            pwSection.classList.remove('open');
+            pwHeader.setAttribute('aria-expanded', 'false');
+          } else {
+            pwSection.classList.add('open');
+            pwHeader.setAttribute('aria-expanded', 'true');
+            var h = pwBody.scrollHeight;
+            pwBody.style.height = '0';
+            pwBody.offsetHeight;
+            pwBody.style.height = h + 'px';
+            pwBody.addEventListener('transitionend', function handler() {
+              if (pwSection.classList.contains('open')) { pwBody.style.height = 'auto'; }
+              pwBody.removeEventListener('transitionend', handler);
+            });
+          }
+        });
+        pwHeader.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pwHeader.click(); }
+        });
+      }
 
       // Session accordion toggle
       document.addEventListener('click', function (e) {

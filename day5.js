@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+﻿document.addEventListener('DOMContentLoaded', function () {
   var el = document.getElementById('day5-body');
   if (!el) return;
 
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>
           Test the full design specification against real plant scenarios before any code is written.
           Resolve gaps on the spot where possible. Define how agent quality will be measured and managed
-          in production — not just at launch. Close the day with stakeholder sign-offs on each deliverable
+          in production after launch, not only on the day it goes live. Close the day with stakeholder sign-offs on each deliverable
           by the accountable domain owner, and executive endorsement of the implementation roadmap.
         </p>
       </div>
@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     <li>Test the MES-to-ERP correlation: does the agent correctly identify the shop-floor cause behind the ERP symptom in each scenario?</li>
                     <li>Compare the agent output to what an experienced operator would actually decide or report. Use the golden sample from Day 2 as the reference benchmark for the normal operating scenario.</li>
                     <li>For each scenario that produces a partial or failed result, classify the root cause immediately: a gap in the decision logic, a metric definition gap, a missing concept, a data gap, a broken MES-to-ERP correlation, or a wrong assumption.</li>
-                    <li>Resolve gaps on the spot where possible — refine the logic, metric, concept, or alert priority framework in the room. Log items that require additional design work with an owner and resolution date.</li>
-                    <li>Assign an overall confidence rating to the full design specification: high, medium, or conditional — with the specific conditions stated.</li>
+                    <li>Resolve gaps on the spot where possible: refine the logic, metric, concept, or alert priority framework in the room. Log items that require additional design work with an owner and resolution date.</li>
+                    <li>Assign an overall confidence rating to the full design specification: high, medium, or conditional: with the specific conditions stated.</li>
                   </ul>
                 </div>
 
@@ -78,11 +78,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="block">
                   <h4>Accelerators</h4>
                   <ul>
-                    <li>Scenario cards: one per scenario, with realistic data values and plant context — prepared by IBM using plant history provided during Days 1 to 3. The team validates the scenario setup before walking the logic through it.</li>
-                    <li>Decision output capture template: expected output, logic output, gap rating (pass, partial, or fail) — structured for rapid completion during the walkthrough, not after.</li>
-                    <li>Metric traceability sheet: each metric linked to its source columns, concepts, and time window filter rules — so when a number looks wrong, the cause can be traced in under two minutes.</li>
+                    <li>Scenario cards: one per scenario, with realistic data values and plant context: prepared by IBM using plant history provided during Days 1 to 3. The team validates the scenario setup before walking the logic through it.</li>
+                    <li>Decision output capture template: expected output, logic output, gap rating (pass, partial, or fail): structured for rapid completion during the walkthrough, not after.</li>
+                    <li>Metric traceability sheet: each metric linked to its source columns, concepts, and time window filter rules: so when a number looks wrong, the cause can be traced in under two minutes.</li>
                     <li>MES-to-ERP correlation test cases: drawn from known historical exception pairs captured in Day 1. Pre-mapped so the walkthrough tests known events rather than inventing hypotheticals.</li>
-                    <li>Gap resolution matrix: gap type, resolution approach, owner, and resolution date — updated in real time during the session.</li>
+                    <li>Gap resolution matrix: gap type, resolution approach, owner, and resolution date: updated in real time during the session.</li>
                     <li>Confidence rating framework: criteria for high, medium, and conditional ratings, including the minimum threshold of scenario pass rate required for each classification.</li>
                   </ul>
                 </div>
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   <li>MES-to-ERP correlation test results: which causal links the agent identified correctly and which it missed.</li>
                   <li>Refined decision logic, metric catalogue, and concepts catalogue with all changes documented.</li>
                   <li>Gap resolution plan: each open item with owner and estimated resolution date.</li>
-                  <li>Overall confidence rating: high, medium, or conditional — with specific conditions stated for conditional ratings.</li>
+                  <li>Overall confidence rating: high, medium, or conditional: with specific conditions stated for conditional ratings.</li>
                 </ul>
               </div>
             </div>
@@ -106,11 +106,11 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="session-toggle">
             <div class="session-number">Session 2</div>
             <div class="session-meta">
-              <h3>Agent Evaluation and Production Monitoring Framework</h3>
+              <h3>Monitoring Agent Performance After Launch</h3>
               <p class="session-desc">
-                Define how agent quality is measured and managed after launch. Agree on what good performance
-                looks like in production, how human overrides feed back into improvement, what triggers
-                a model review, and who owns agent governance on the client side.
+                Agree on what good agent performance looks like in production, how human overrides feed
+                back into improvement, what triggers a performance review, and who on the client
+                side owns ongoing governance.
               </p>
             </div>
             <span class="session-chevron"></span>
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="block">
                   <h4>Objective</h4>
                   <ul>
-                    <li>Define the production evaluation framework: the metrics and signals that indicate whether the agent is performing as designed after launch, not just on Day 1.</li>
+                    <li>Agree on the metrics and signals that confirm the agent is performing as designed in the months after launch, not just on the day it goes live.</li>
                     <li>Agree on what good performance looks like in production: recommendation acceptance rate, override rate, operator-reported usefulness, and alignment with the Day 2 golden sample and success criteria.</li>
                     <li>Design the feedback capture mechanism: when a human overrides the agent recommendation, where is that override captured, who reviews it, and how does it feed back into logic or threshold refinement? Without this, the agent cannot improve and cannot learn from the plant floor.</li>
                     <li>Define the threshold that triggers a model review: override rate above a set percentage, a data freshness SLA breach sustained for more than a defined period, or a pattern of operator complaints. Agree who initiates the review and what the review process looks like.</li>
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <li>When an operator overrides the agent recommendation, where does that go today? Where should it go after launch?</li>
                     <li>Who on the client team reviews override logs and decides whether a pattern indicates a logic error or a data problem?</li>
                     <li>What is the threshold at which the agent should be reviewed: 20% override rate, 30%, something else? Who decides?</li>
-                    <li>If the data freshness SLA from Day 3 is breached for more than 24 hours, what happens to agent recommendations — do they continue, show a warning, or stop?</li>
+                    <li>If the data freshness SLA from Day 3 is breached for more than 24 hours, what happens to agent recommendations: do they continue, show a warning, or stop?</li>
                     <li>Who is the agent governance owner on the client side, and what is their authority to suspend agent actions?</li>
                     <li>Which reference documents does the agent use as context? Who owns them, and how will they be kept current?</li>
                   </ul>
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   <h4>Accelerators</h4>
                   <ul>
                     <li>Production monitoring dashboard template: pre-listed signals (recommendation acceptance rate, override rate, data freshness status, operator satisfaction score) with blank threshold and alert owner fields.</li>
-                    <li>Override feedback capture design guide: a reference showing three common feedback loop patterns — inline override capture, daily summary log, and manual review queue — with a recommendation on which suits the plant's existing workflow.</li>
+                    <li>Override feedback capture design guide: a reference showing three common feedback loop patterns: inline override capture, daily summary log, and manual review queue: with a recommendation on which suits the plant's existing workflow.</li>
                     <li>Model review trigger reference: industry examples of override rate thresholds and data quality triggers that have been used to initiate model reviews in comparable manufacturing AI deployments.</li>
                     <li>Agent governance role description: responsibilities, time commitment, escalation path, and the authority boundaries for the client-side governance owner.</li>
                     <li>Knowledge base governance template: document name, owner, review frequency, approved by, and the process for adding or removing content from the agent's context.</li>
@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <li>Map dependencies between IBM deliverables and client deliverables: data access confirmed in the Day 3 data contract, master data corrections, system integrations, team availability.</li>
                     <li>Confirm the change management plan: training schedule, rollout sequence, communication approach, and how the Day 2 adoption champion escalates issues during the build and rollout phases.</li>
                     <li>Walk through the deliverable register and obtain sign-off from each accountable stakeholder: domain stewards confirm the domain map, metric stewards confirm the catalogue, Plant Manager confirms decision logic and constraints.</li>
-                    <li>Present the executive summary brief — drafted at the end of Day 4 — to the executive sponsor. This is not a technical review. It is confirmation that the direction, scope, and client commitments are supported at the top.</li>
+                    <li>Present the executive summary brief: drafted at the end of Day 4: to the executive sponsor. This is not a technical review. It is confirmation that the direction, scope, and client commitments are supported at the top.</li>
                     <li>Document all open issues with owners and resolution dates. Agree on the build phase start date.</li>
                   </ul>
                 </div>
@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="block">
                   <h4>Focus Questions</h4>
                   <ul>
-                    <li>What is the minimum viable scope for the first build phase — what must work on day one to demonstrate value to the plant floor?</li>
+                    <li>What is the minimum viable scope for the first build phase: what must work on day one to demonstrate value to the plant floor?</li>
                     <li>Which data products, master data corrections, and system integrations from the Day 3 data contract must be in place before build starts?</li>
                     <li>What does the client team need to deliver before the IBM team can proceed, and what is the agreed date for each item?</li>
                     <li>Is each domain steward and accountable stakeholder ready to confirm their deliverable today?</li>
@@ -234,9 +234,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="block">
                   <h4>Accelerators</h4>
                   <ul>
-                    <li>Deliverable sign-off register: deliverable name, accountable stakeholder, confirmation status, and date — pre-populated with every named output from Days 1 through 5. The team signs, not assembles.</li>
+                    <li>Deliverable sign-off register: deliverable name, accountable stakeholder, confirmation status, and date: pre-populated with every named output from Days 1 through 5. The team signs, not assembles.</li>
                     <li>Implementation planning template: Phase 1 scope, build sequence, client dependency list pulled from the Day 3 data contract, success metrics, and risk log.</li>
-                    <li>Dependency map: IBM deliverables vs. client deliverables — side by side with the agreed dates from the data contract.</li>
+                    <li>Dependency map: IBM deliverables vs. client deliverables: side by side with the agreed dates from the data contract.</li>
                     <li>Change management plan template: training schedule, rollout sequence, communication approach, and adoption champion responsibilities.</li>
                     <li>Open issues register: issue description, owner, resolution date, and impact on build start if unresolved.</li>
                     <li>Executive summary brief: drafted on Day 4, reviewed on Day 5 morning, presented in this session. One page. No technical detail that was not in the Day 1 charter.</li>

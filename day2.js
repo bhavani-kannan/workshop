@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+﻿document.addEventListener('DOMContentLoaded', function () {
   var el = document.getElementById('day2-body');
   if (!el) return;
 
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <h3>Objective of the day</h3>
         <p>
           The shortlist from Day 1 is tested against practical criteria and narrowed to one use case.
-          That use case is formally defined — questions it answers, dimensions, time windows, success criteria —
+          That use case is formally defined: questions it answers, dimensions, time windows, success criteria -
           and then grounded in how it will actually reach the operator: what the output looks like,
           how trust is built, and who will champion adoption on the floor.
           A one-page progress note goes to the executive team at end of day.
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="session-toggle">
             <div class="session-number">Session 1</div>
             <div class="session-meta">
-              <h3>Use Case Scoring</h3>
+              <h3>Scoring the Shortlisted Decisions</h3>
               <p class="session-desc">
                 Score each shortlisted decision against a structured criteria set covering impact,
                 frequency, data access, and time to a measurable result.
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   <h4>Accelerators</h4>
                   <ul>
                     <li>Use case scoring matrix: pre-populated with the Day 1 shortlist. Participants score, not build, the matrix. Benchmark scores from similar manufacturing sites are included as calibration anchors so the team does not start from zero.</li>
-                    <li>Data dependency quick-check: a column in the scoring matrix that flags whether data is confirmed available, likely available, or unknown — pulled from Day 1 ERP and MES exception notes.</li>
+                    <li>Data dependency quick-check: a column in the scoring matrix that flags whether data is confirmed available, likely available, or unknown: pulled from Day 1 ERP and MES exception notes.</li>
                   </ul>
                 </div>
               </div>
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="session-toggle">
             <div class="session-number">Session 2</div>
             <div class="session-meta">
-              <h3>Stakeholder Validation and Use Case Selection</h3>
+              <h3>Selecting the Priority Use Case and Defining It Fully</h3>
               <p class="session-desc">
                 Present the top two or three scored candidates to the wider group. Surface concerns
                 about feasibility and ownership. Reach explicit agreement on one use case and define it fully:
@@ -121,10 +121,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     <li>Is there an internal champion who will own this use case through the build phase?</li>
                     <li>Are there concerns about data ownership, system access, or organizational approvals that would slow delivery?</li>
                     <li>Which candidate has the clearest executive support from the Day 1 charter?</li>
-                    <li>Which role does this use case serve first — and what specific question should it answer within the first 30 seconds of use?</li>
+                    <li>Which role does this use case serve first: and what specific question should it answer within the first 30 seconds of use?</li>
                     <li>At what level does the answer need to be available: plant, area, line, machine, shift?</li>
                     <li>What time windows matter most: real time, daily, weekly, or trend-based?</li>
-                    <li>What does a good answer look like — a number, a ranked list, a recommendation, or a comparison against baseline?</li>
+                    <li>What does a good answer look like: a number, a ranked list, a recommendation, or a comparison against baseline?</li>
                     <li>Can someone in the room describe a perfect agent response, right now, in one or two sentences? If not, what is missing before they can?</li>
                   </ul>
                 </div>
@@ -143,9 +143,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="block">
                   <h4>Accelerators</h4>
                   <ul>
-                    <li>Candidate summary cards: one page per shortlisted use case with scoring summary, known blockers, and data dependency status — prepared from Session 1 output.</li>
+                    <li>Candidate summary cards: one page per shortlisted use case with scoring summary, known blockers, and data dependency status: prepared from Session 1 output.</li>
                     <li>Use case definition canvas: persona, questions answered, dimensions, time windows, and outcome format. Pre-structured so the team fills blanks, not designs structure.</li>
-                    <li>Golden sample capture template: a structured prompt that guides the team to articulate a complete example agent response — including trigger, data used, recommendation produced, and what action it enables.</li>
+                    <li>Golden sample capture template: a structured prompt that guides the team to articulate a complete example agent response: including trigger, data used, recommendation produced, and what action it enables.</li>
                     <li>Success criteria template: 30-day, 90-day, and 180-day improvement targets over the Day 1 baseline.</li>
                   </ul>
                 </div>
@@ -170,11 +170,11 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="session-toggle">
             <div class="session-number">Session 3</div>
             <div class="session-meta">
-              <h3>Interface Design and Adoption Readiness</h3>
+              <h3>Designing How Recommendations Reach the Operator</h3>
               <p class="session-desc">
-                Define how the agent recommendation actually reaches the operator, what it looks like,
-                why an operator would trust it, and who on the client side will lead adoption.
-                A technically correct agent that the floor does not use has delivered nothing.
+                Agree on how the agent recommendation reaches the operator: what it looks like,
+                what makes an experienced operator trust it enough to act on it, and who on the
+                client side will lead adoption on the floor.
               </p>
             </div>
             <span class="session-chevron"></span>
@@ -186,8 +186,9 @@ document.addEventListener('DOMContentLoaded', function () {
                   <h4>Objective</h4>
                   <ul>
                     <li>Define the output format for the agent recommendation: alert, dashboard panel, shift report, chat interface, or integrated into an existing system the operator already uses.</li>
+                    <li>Define the recommendation output schema: what fields every agent response must contain. At minimum: the recommendation itself, the confidence level, the top two or three contributing factors the operator can verify, a reference to the source data, and whether approval is required. Agree the field names, order, and which are always visible versus expandable. This schema is what the build team implements.</li>
                     <li>Identify who uses this output daily, in what context, and how much time they have to act on it.</li>
-                    <li>Identify what would make an experienced operator trust the agent recommendation versus ignore or override it — and design those trust signals in from the start.</li>
+                    <li>Identify what would make an experienced operator trust the agent recommendation versus ignore or override it: and design those trust signals in from the start.</li>
                     <li>Assess change impact: how different is this from how decisions are made today, who is most affected, and what resistance is realistic.</li>
                     <li>Designate an internal champion: the person on the client side who will drive adoption, gather feedback from the floor, and escalate issues during the build and rollout phases.</li>
                   </ul>
@@ -196,11 +197,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="block">
                   <h4>Focus Questions</h4>
                   <ul>
-                    <li>Where does the operator need to see this recommendation — on the line, at their desk, in the shift handover meeting, or on a mobile device?</li>
+                    <li>Where does the operator need to see this recommendation: on the line, at their desk, in the shift handover meeting, or on a mobile device?</li>
                     <li>What systems does this operator already use every shift? Is there an existing interface the recommendation should appear in rather than a new one?</li>
                     <li>What would make an experienced operator say "I trust this" the first time they see it? What would make them dismiss it?</li>
-                    <li>If the agent gets it wrong once, what is the recovery plan — how does trust get rebuilt?</li>
-                    <li>How different is this from how the decision is made today? Who loses visibility, authority, or control — and how is that managed?</li>
+                    <li>If the agent gets it wrong once, what is the recovery plan: how does trust get rebuilt?</li>
+                    <li>How different is this from how the decision is made today? Who loses visibility, authority, or control: and how is that managed?</li>
                     <li>Who on the client team is willing to champion this on the floor, gather honest feedback, and escalate problems during rollout?</li>
                     <li>What training or orientation do frontline operators need before they interact with the agent for the first time?</li>
                   </ul>
@@ -219,8 +220,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="block">
                   <h4>Accelerators</h4>
                   <ul>
-                    <li>Output format reference: examples of alert, dashboard widget, shift report entry, and chat interface — with descriptions of which format suits which context and user type.</li>
-                    <li>Trust signal checklist: what elements in a recommendation build operator trust — source transparency, confidence indicator, override option, explainability level, and comparison to baseline.</li>
+                    <li>Output format reference: examples of alert, dashboard widget, shift report entry, and chat interface: with descriptions of which format suits which context and user type.</li>
+                    <li>Trust signal checklist: what elements in a recommendation build operator trust: source transparency, confidence indicator, override option, explainability level, and comparison to baseline.</li>
                     <li>Change impact assessment template: decision type, current approach, changed approach, affected roles, resistance likelihood, and mitigation approach.</li>
                     <li>Champion role definition: responsibilities, time commitment per week, escalation path, and feedback loop to the IBM team during build and rollout.</li>
                   </ul>
@@ -230,8 +231,9 @@ document.addEventListener('DOMContentLoaded', function () {
               <div class="output-box">
                 <h4>Session output</h4>
                 <ul>
-                  <li>Interface specification: output format, delivery channel, and system integration point for the agent recommendation.</li>
-                  <li>Trust signal design: what the agent must show — and how — for operators to act on its recommendations.</li>
+                  <li>Interface specification: output format, delivery channel, and system integration point.</li>
+                  <li>Recommendation output schema: named fields, their order, and which are always visible versus expandable. This is the contract between the business design and the build team.</li>
+                  <li>Trust signal design: what the agent must show: and how: for operators to act on its recommendations.</li>
                   <li>Change impact summary: affected roles, resistance risk, and mitigation approach.</li>
                   <li>Named internal champion with agreed responsibilities and feedback cadence.</li>
                   <li>Training requirements summary: who needs orientation, what they need to understand, and when.</li>

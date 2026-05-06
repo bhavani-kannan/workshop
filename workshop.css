@@ -1,6 +1,8 @@
 :root {
   --ibm-blue: #0f62fe;
   --ibm-blue-hover: #0353e9;
+  --ibm-yellow: #f1c21b;
+  --ibm-yellow-bg: #fcf4d6;
   --gray-100: #161616;
   --gray-90: #262626;
   --gray-80: #393939;
@@ -448,6 +450,259 @@ li:last-child { margin-bottom: 0; }
   background: var(--gray-10);
   padding: 14px;
   border-top: 3px solid var(--ibm-blue);
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--gray-100);
+}
+
+/* ---- Pre-workshop readiness section ---- */
+
+.pre-workshop-section {
+  border-bottom: 1px solid var(--gray-20);
+}
+
+#pre-workshop-body {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.42s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.pre-workshop-header {
+  padding: 22px 42px 20px;
+  background: var(--gray-100);
+  border-left: 5px solid var(--ibm-yellow);
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  flex-wrap: wrap;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.15s ease;
+}
+
+.pre-workshop-header:hover { background: #1a1a1a; }
+
+.pw-chevron {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  align-self: center;
+  margin-left: auto;
+}
+
+.pw-chevron::before,
+.pw-chevron::after {
+  content: '';
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  height: 2px;
+  width: 10px;
+  top: 11px;
+  border-radius: 1px;
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+              background 0.2s ease;
+}
+
+.pw-chevron::before {
+  left: 1px;
+  transform: rotate(45deg);
+  transform-origin: 100% 50%;
+}
+
+.pw-chevron::after {
+  right: 1px;
+  transform: rotate(-45deg);
+  transform-origin: 0% 50%;
+}
+
+.pre-workshop-section.open .pw-chevron::before {
+  transform: rotate(-45deg);
+  background: var(--ibm-yellow);
+}
+
+.pre-workshop-section.open .pw-chevron::after {
+  transform: rotate(45deg);
+  background: var(--ibm-yellow);
+}
+
+.pre-workshop-header-text { flex: 1; min-width: 260px; }
+
+.pre-workshop-eyebrow {
+  display: block;
+  color: var(--ibm-yellow);
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1.4px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.pre-workshop-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--white);
+  margin: 0 0 8px;
+  letter-spacing: -0.1px;
+}
+
+.pre-workshop-header p {
+  font-size: 13px;
+  color: var(--gray-30);
+  margin: 0;
+  line-height: 1.55;
+  max-width: 700px;
+}
+
+.pre-workshop-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-self: center;
+}
+
+.pre-workshop-chip {
+  font-size: 11px;
+  background: rgba(241, 194, 27, 0.15);
+  border: 1px solid rgba(241, 194, 27, 0.4);
+  color: var(--ibm-yellow);
+  padding: 4px 11px;
+  white-space: nowrap;
+  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.pre-workshop-body {
+  background: #fafafa;
+  padding: 0 42px 36px;
+}
+
+/* Tracks reuse .session styles — override number badge color */
+
+.pre-workshop-body .session-number {
+  background: var(--gray-70);
+  min-width: 100px;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.pre-workshop-body .session.open .session-number {
+  background: var(--gray-100);
+}
+
+.pre-workshop-body .session.open .session-chevron::before,
+.pre-workshop-body .session.open .session-chevron::after {
+  background: var(--ibm-yellow);
+}
+
+.pre-workshop-body .session.open {
+  border-left-color: var(--ibm-yellow);
+}
+
+/* ---- Readiness gate ---- */
+
+.readiness-gate {
+  margin-top: 18px;
+  background: var(--gray-100);
+  border-left: 5px solid var(--ibm-yellow);
+  padding: 22px 26px;
+}
+
+.readiness-gate-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.readiness-gate-heading h3 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--ibm-yellow);
+}
+
+.readiness-gate-badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: rgba(241, 194, 27, 0.18);
+  border: 1px solid rgba(241, 194, 27, 0.5);
+  color: var(--ibm-yellow);
+  padding: 3px 9px;
+}
+
+.readiness-gate-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.readiness-gate-col h4 {
+  margin: 0 0 10px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--gray-30);
+}
+
+.readiness-gate-col ul {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.readiness-gate-col ul li {
+  font-size: 13px;
+  color: var(--gray-30);
+  line-height: 1.5;
+  margin-bottom: 7px;
+}
+
+.readiness-gate-col ul li:last-child { margin-bottom: 0; }
+
+.readiness-gate-warning {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(241, 194, 27, 0.25);
+  font-size: 12.5px;
+  color: var(--ibm-yellow);
+  line-height: 1.55;
+}
+
+/* ---- Pre-workshop outputs ---- */
+
+.pre-workshop-outputs {
+  margin-top: 18px;
+  background: var(--white);
+  border: 1px solid var(--gray-20);
+  padding: 20px 22px;
+}
+
+.pre-workshop-outputs h3 {
+  margin: 0 0 14px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--gray-70);
+}
+
+.pre-workshop-outputs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.pre-output-card {
+  background: var(--ibm-yellow-bg);
+  padding: 14px;
+  border-top: 3px solid var(--ibm-yellow);
   font-size: 13px;
   line-height: 1.4;
   font-weight: 600;
