@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Agentic AI Readiness for Manufacturing | IBM Consulting</title>
+  <title>Manufacturing Decision Workshop | IBM Consulting</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -13,134 +13,123 @@
 <body>
   <div class="page">
 
-    <div class="eyebrow">IBM Consulting | Manufacturing Decision Intelligence</div>
-    <h1>Agentic AI Readiness for Manufacturing</h1>
-    <p class="subtitle">
-      A structured five-day engagement to surface the decisions that drive plant performance,
-      validate data readiness, define decision logic, and arrive at a build-ready use case.
-    </p>
-
-    <div class="workshop-promise">
-      <p>
-        Each day produces a concrete output: a decision backlog, a selected use case, a data
-        readiness assessment, a decision model, and a validated implementation path.
-        No slide decks that sit on shelves.
+    <!-- Page header -->
+    <div class="page-header">
+      <div class="eyebrow">IBM Consulting | Manufacturing Decision Intelligence</div>
+      <h1>Agentic AI Readiness for Manufacturing</h1>
+      <p class="subtitle">
+        A structured five-day engagement to surface the decisions that drive plant performance,
+        validate data readiness, define decision logic, and arrive at a build-ready use case.
       </p>
+      <div class="workshop-promise">
+        <p>
+          Each day produces a concrete output: a decision backlog, a selected use case, a data
+          readiness assessment, a decision model, and a validated implementation path.
+          No slide decks that sit on shelves.
+        </p>
+      </div>
     </div>
 
-    <div class="accordion">
+    <!-- Tab navigation -->
+    <div class="tab-nav" id="tab-nav" role="tablist">
 
-      <!-- DAY 1 -->
-      <details open>
-        <summary>
-          <div class="summary-meta">
-            <div class="day-label">Day 1</div>
-            <span class="session-count">3 sessions</span>
-          </div>
-          <div class="summary-main">
-            <div class="day-title">Identify Critical Manufacturing Decisions</div>
-            <div class="day-objective-line">
-              Identify what gets decided, how, and where the process consistently breaks down.
-            </div>
-          </div>
-          <div class="summary-outcomes">
-            <div class="outcome-chip">Stakeholder personas identified</div>
-            <div class="outcome-chip">Decision inventory (15 to 25 decisions)</div>
-            <div class="outcome-chip">Priority shortlist (5 to 7 decisions)</div>
-          </div>
-        </summary>
-        <div id="day1-body"></div>
-      </details>
+      <button class="tab-btn active" data-panel="panel-day1" role="tab" aria-selected="true" aria-controls="panel-day1">
+        <span class="tab-day-label">Day 1</span>
+        <span class="tab-day-title">Identify Critical Manufacturing Decisions</span>
+        <span class="tab-session-count">3 sessions</span>
+      </button>
 
-      <!-- DAY 2 -->
-      <details>
-        <summary>
-          <div class="summary-meta">
-            <div class="day-label">Day 2</div>
-            <span class="session-count">3 sessions</span>
-          </div>
-          <div class="summary-main">
-            <div class="day-title">Select the Priority Use Case</div>
-            <div class="day-objective-line">
-              Choose one decision to take forward, based on impact, frequency, and data access.
-            </div>
-          </div>
-          <div class="summary-outcomes">
-            <div class="outcome-chip">Scored use case matrix</div>
-            <div class="outcome-chip">Selected and defined use case</div>
-            <div class="outcome-chip">Dimensions, time windows, success criteria</div>
-          </div>
-        </summary>
-        <div id="day2-body"></div>
-      </details>
+      <button class="tab-btn" data-panel="panel-day2" role="tab" aria-selected="false" aria-controls="panel-day2">
+        <span class="tab-day-label">Day 2</span>
+        <span class="tab-day-title">Select the Priority Use Case</span>
+        <span class="tab-session-count">3 sessions</span>
+      </button>
 
-      <!-- DAY 3 -->
-      <details>
-        <summary>
-          <div class="summary-meta">
-            <div class="day-label">Day 3</div>
-            <span class="session-count">3 sessions</span>
-          </div>
-          <div class="summary-main">
-            <div class="day-title">Map Data Domains, Entities, and Gaps</div>
-            <div class="day-objective-line">
-              Map the data sub-domains, sketch the key entities, and surface gaps before design begins.
-            </div>
-          </div>
-          <div class="summary-outcomes">
-            <div class="outcome-chip">Domain map with stewards</div>
-            <div class="outcome-chip">Entity sketch per domain</div>
-            <div class="outcome-chip">Gap register and readiness rating</div>
-          </div>
-        </summary>
-        <div id="day3-body"></div>
-      </details>
+      <button class="tab-btn" data-panel="panel-day3" role="tab" aria-selected="false" aria-controls="panel-day3">
+        <span class="tab-day-label">Day 3</span>
+        <span class="tab-day-title">Map Data Domains, Entities, and Gaps</span>
+        <span class="tab-session-count">3 sessions</span>
+      </button>
 
-      <!-- DAY 4 -->
-      <details>
-        <summary>
-          <div class="summary-meta">
-            <div class="day-label">Day 4</div>
-            <span class="session-count">3 sessions</span>
-          </div>
-          <div class="summary-main">
-            <div class="day-title">Define Metrics, Decision Logic, and Constraints</div>
-            <div class="day-objective-line">
-              Define the metric catalogue, the decision logic, the concepts layer, and the operating limits.
-            </div>
-          </div>
-          <div class="summary-outcomes">
-            <div class="outcome-chip">Metric catalogue (5 to 12 metrics)</div>
-            <div class="outcome-chip">Decision logic and concepts catalogue</div>
-            <div class="outcome-chip">Constraint and approval rules</div>
-          </div>
-        </summary>
-        <div id="day4-body"></div>
-      </details>
+      <button class="tab-btn" data-panel="panel-day4" role="tab" aria-selected="false" aria-controls="panel-day4">
+        <span class="tab-day-label">Day 4</span>
+        <span class="tab-day-title">Define Metrics, Decision Logic, and Constraints</span>
+        <span class="tab-session-count">3 sessions</span>
+      </button>
 
-      <!-- DAY 5 -->
-      <details>
-        <summary>
-          <div class="summary-meta">
-            <div class="day-label">Day 5</div>
-            <span class="session-count">3 sessions</span>
-          </div>
-          <div class="summary-main">
-            <div class="day-title">Validate Scenarios and Define Next Steps</div>
-            <div class="day-objective-line">
-              Test the decision logic against real plant scenarios and agree on the first build milestone.
-            </div>
-          </div>
-          <div class="summary-outcomes">
-            <div class="outcome-chip">Validated scenarios and confidence rating</div>
-            <div class="outcome-chip">Implementation roadmap</div>
-            <div class="outcome-chip">Signed-off artefact register</div>
-          </div>
-        </summary>
-        <div id="day5-body"></div>
-      </details>
+      <button class="tab-btn" data-panel="panel-day5" role="tab" aria-selected="false" aria-controls="panel-day5">
+        <span class="tab-day-label">Day 5</span>
+        <span class="tab-day-title">Validate Scenarios and Define Next Steps</span>
+        <span class="tab-session-count">3 sessions</span>
+      </button>
 
     </div>
+
+    <!-- Day 1 panel -->
+    <div class="tab-panel active" id="panel-day1" role="tabpanel">
+      <div class="panel-header">
+        <span class="panel-tagline">Opens with executive alignment, works through operations, closes with an executive debrief for buy-in.</span>
+        <div class="panel-chips">
+          <div class="outcome-chip">Workshop charter (executive agreed)</div>
+          <div class="outcome-chip">Role profiles, baseline metrics, and plant vocabulary</div>
+          <div class="outcome-chip">Decision inventory and priority shortlist</div>
+        </div>
+      </div>
+      <div id="day1-body"></div>
+    </div>
+
+    <!-- Day 2 panel -->
+    <div class="tab-panel" id="panel-day2" role="tabpanel">
+      <div class="panel-header">
+        <span class="panel-tagline">Choose one decision to take forward, based on impact, frequency, and data access.</span>
+        <div class="panel-chips">
+          <div class="outcome-chip">Scored use case matrix with golden sample</div>
+          <div class="outcome-chip">Selected use case: questions, dimensions, time windows</div>
+          <div class="outcome-chip">Interface specification and adoption champion</div>
+        </div>
+      </div>
+      <div id="day2-body"></div>
+    </div>
+
+    <!-- Day 3 panel -->
+    <div class="tab-panel" id="panel-day3" role="tabpanel">
+      <div class="panel-header">
+        <span class="panel-tagline">Map the data sub-domains, sketch the key entities, and surface gaps before design begins.</span>
+        <div class="panel-chips">
+          <div class="outcome-chip">Domain map with owners and MES-to-ERP flow gaps</div>
+          <div class="outcome-chip">Entity sketch, gap register, and readiness rating</div>
+          <div class="outcome-chip">Signed data contract with confirmed system inventory</div>
+        </div>
+      </div>
+      <div id="day3-body"></div>
+    </div>
+
+    <!-- Day 4 panel -->
+    <div class="tab-panel" id="panel-day4" role="tabpanel">
+      <div class="panel-header">
+        <span class="panel-tagline">Define the metric catalogue, the decision logic, the concepts layer, and the operating limits.</span>
+        <div class="panel-chips">
+          <div class="outcome-chip">Metric catalogue with baselines and calculation logic</div>
+          <div class="outcome-chip">Decision logic, HITL classification, and audit spec</div>
+          <div class="outcome-chip">Constraints, guardrails, and draft executive brief</div>
+        </div>
+      </div>
+      <div id="day4-body"></div>
+    </div>
+
+    <!-- Day 5 panel -->
+    <div class="tab-panel" id="panel-day5" role="tabpanel">
+      <div class="panel-header">
+        <span class="panel-tagline">Validate the design against real scenarios, obtain stakeholder sign-offs, and secure executive endorsement of the roadmap.</span>
+        <div class="panel-chips">
+          <div class="outcome-chip">Validated scenarios with confidence rating</div>
+          <div class="outcome-chip">Production monitoring and feedback capture plan</div>
+          <div class="outcome-chip">Sign-offs, change management plan, and executive endorsement</div>
+        </div>
+      </div>
+      <div id="day5-body"></div>
+    </div>
+
   </div>
 
   <script src="day1.js" defer></script>
@@ -148,5 +137,99 @@
   <script src="day3.js" defer></script>
   <script src="day4.js" defer></script>
   <script src="day5.js" defer></script>
+
+  <script>
+    (function () {
+      var nav    = document.getElementById('tab-nav');
+      var btns   = document.querySelectorAll('.tab-btn');
+      var panels = document.querySelectorAll('.tab-panel');
+
+      // Tab switching
+      btns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var targetId = this.dataset.panel;
+
+          btns.forEach(function (b) {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+
+          panels.forEach(function (p) {
+            p.classList.remove('active');
+          });
+
+          this.classList.add('active');
+          this.setAttribute('aria-selected', 'true');
+          document.getElementById(targetId).classList.add('active');
+
+          // Scroll to top of nav if below viewport
+          var rect = nav.getBoundingClientRect();
+          if (rect.top < 0) {
+            nav.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      // Keyboard navigation (left/right arrows)
+      nav.addEventListener('keydown', function (e) {
+        var active = document.querySelector('.tab-btn.active');
+        var all    = Array.from(btns);
+        var idx    = all.indexOf(active);
+
+        if (e.key === 'ArrowRight') {
+          var next = all[idx + 1] || all[0];
+          next.click();
+          next.focus();
+        } else if (e.key === 'ArrowLeft') {
+          var prev = all[idx - 1] || all[all.length - 1];
+          prev.click();
+          prev.focus();
+        }
+      });
+
+      // Session accordion toggle
+      document.addEventListener('click', function (e) {
+        var toggle = e.target.closest('.session-toggle');
+        if (!toggle) return;
+        var session = toggle.closest('.session');
+        if (!session) return;
+        var content = session.querySelector('.session-content');
+        if (session.classList.contains('open')) {
+          content.style.height = content.scrollHeight + 'px';
+          content.offsetHeight; // force reflow
+          content.style.height = '0';
+          session.classList.remove('open');
+        } else {
+          session.classList.add('open');
+          content.style.height = 'auto';
+          var h = content.scrollHeight;
+          content.style.height = '0';
+          content.offsetHeight; // force reflow
+          content.style.height = h + 'px';
+          content.addEventListener('transitionend', function handler() {
+            if (session.classList.contains('open')) { content.style.height = 'auto'; }
+            content.removeEventListener('transitionend', handler);
+          });
+        }
+      });
+
+      // Sticky shadow on scroll
+      var observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            nav.classList.toggle('is-stuck', !entry.isIntersecting);
+          });
+        },
+        { threshold: 0, rootMargin: '0px 0px 0px 0px' }
+      );
+
+      // Observe a sentinel element just above the nav
+      var sentinel = document.createElement('div');
+      sentinel.style.cssText = 'height:1px;pointer-events:none;';
+      nav.parentNode.insertBefore(sentinel, nav);
+      observer.observe(sentinel);
+    })();
+  </script>
+
 </body>
 </html>
