@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+﻿document.addEventListener('DOMContentLoaded', function () {
   var el = document.getElementById('day1-body');
   if (!el) return;
 
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   <ul>
                     <li>What is the hardest question you face at the start of your shift, and how long does it take to answer it today?</li>
                     <li>What is your current OEE? What does a good shift look like versus a bad one, in numbers?</li>
-                    <li>What abbreviations, local terms, or codes does your team use daily that an outsider would not know? For example: what does "PM" mean on your floor — planned maintenance, or plant manager?</li>
+                    <li>What abbreviations, local terms, or codes does your team use daily that an outsider would not know? For example: what does "PM" mean on your floor: planned maintenance, or plant manager?</li>
                     <li>How are MES alarms handled on the line? Which ones are routinely silenced or overridden, and why?</li>
                     <li>When downtime occurs, how is the reason code selected? How often does the logged reason reflect what actually happened?</li>
                     <li>When a shop-floor exception is resolved, does that resolution reach the ERP? What gets lost in translation?</li>
@@ -147,8 +147,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     <li>Plant vocabulary capture template: abbreviations, local codes, system-specific terms, and role-specific language. Distributed as pre-work; validated in session.</li>
                     <li>MES exception reference: common alarm types, downtime reason code structures, scrap and rework logging conventions.</li>
                     <li>ERP exception reference: MRP exception categories, inventory mismatch types, cost variance patterns in SAP.</li>
-                    <li>Role profile template: role, five hard questions, current answer time per question, decision types owned.</li>
-                    <li>Scenario cards: machine breakdown, delayed order, material shortage, capacity crunch — used to probe exception handling.</li>
+                    <li>Role profile template: role, five critical operational questions, current answer time per question, decision types owned.</li>
+                    <li>Scenario cards: machine breakdown, delayed order, material shortage, capacity crunch: used to probe exception handling.</li>
                   </ul>
                 </div>
               </div>
@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <h4>Session output</h4>
                 <ul>
                   <li>Operational flow map with friction points and manual interventions marked.</li>
-                  <li>Three to five role profiles: role, five hard questions, current answer time, and decision types owned.</li>
+                  <li>Three to five role profiles: role, five critical operational questions, current answer time, and decision types owned.</li>
                   <li>Current performance baseline: actual values for OEE, downtime, scrap rate, and other tracked KPIs. This is the reference point for all improvement claims.</li>
                   <li>Plant vocabulary register: abbreviations, local terms, and codes the agent must understand correctly.</li>
                   <li>MES exception patterns: alarms ignored, downtime reasons inaccurate, scrap logged late, local fixes not fed upstream.</li>
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   <h4>Objective</h4>
                   <ul>
                     <li>Group similar decisions, remove duplicates, and score by impact, frequency, and data dependency.</li>
-                    <li>Flag decisions where organizational silos, absent ownership, or weak MES-to-ERP feedback loops are the structural cause of the problem — not missing technology.</li>
+                    <li>Flag decisions where organizational silos, absent ownership, or weak MES-to-ERP feedback loops are the structural cause of the problem: not missing technology.</li>
                     <li>Prepare a one-page executive brief: the shortlist, the scoring rationale, and the proposed Day 2 scope.</li>
                     <li>Brief executives in a 30-minute standing debrief. Get their reaction and surface any strategic context that changes the ranking before Day 2 begins.</li>
                   </ul>
