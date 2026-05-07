@@ -583,7 +583,7 @@ li:last-child { margin-bottom: 0; }
 
 .pre-workshop-body .session-number {
   background: var(--gray-70);
-  min-width: 100px;
+  width: 168px;
   font-size: 10px;
   letter-spacing: 1px;
 }
