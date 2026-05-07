@@ -8,10 +8,13 @@
       <div class="day-objective-block">
         <h3>Objective of the day</h3>
         <p>
-          The shortlist from Day 1 is tested against practical criteria and narrowed to one use case.
-          That use case is formally defined: questions it answers, dimensions, time windows, success criteria -
-          and then grounded in how it will actually reach the operator: what the output looks like,
-          how trust is built, and who will champion adoption on the floor.
+          The shortlist from Day 1 is scored and narrowed to one use case. Before that use case is
+          defined in detail, IBM presents a structured assessment of how the decision is currently made
+          and where it structurally fails, then recommends the optimized process the agent should be
+          built on. The client agrees on what changes in how people work before the agent is introduced.
+          The use case is then fully defined against the agreed optimized process: questions, dimensions,
+          time windows, success criteria, and golden sample. The goal is not to agentize what exists
+          today but to optimize the decision process first and then build the agent on that improved foundation.
           A one-page progress note goes to the executive team at end of day.
         </p>
       </div>
@@ -91,9 +94,11 @@
             <div class="session-meta">
               <h3>Selecting the Priority Use Case and Defining It Fully</h3>
               <p class="session-desc">
-                Present the top two or three scored candidates to the wider group. Surface concerns
-                about feasibility and ownership. Reach explicit agreement on one use case and define it fully:
-                questions it answers, dimensions, time windows, and what a good outcome looks like.
+                Present the top candidates, surface concerns, and select one use case. Before defining
+                it in detail, IBM presents how the decision is currently made and where it structurally
+                fails, then recommends the optimized process. The group agrees on what changes in the
+                human steps — not just what the agent does. The use case is then defined against the
+                agreed optimized process, not the current one.
               </p>
             </div>
             <span class="session-chevron"></span>
@@ -106,6 +111,10 @@
                   <ul>
                     <li>Present the top two or three scored candidates and walk through the scoring rationale. Open the floor to concerns about data access, political factors, or capability gaps.</li>
                     <li>Identify which candidate has a clear owner, a willing team, and real stakeholder appetite. Reach explicit agreement on one use case.</li>
+                    <li>IBM presents the as-is decision process assessment synthesized from Day 1: the current decision steps, where they structurally fail, and what that failure costs. This is not a recap of complaints — it is a documented failure mode analysis per candidate, prepared before the session.</li>
+                    <li>IBM presents the to-be recommendation: how this decision should be made in an AI-assisted operation. What changes in the human steps. Where manual steps are eliminated. Where approval authority shifts. Where data that was ignored becomes the primary input. Benchmarked against comparable plant deployments where available.</li>
+                    <li>The group agrees on the to-be process: which recommended changes the client commits to making before build begins, which are deferred, and which are rejected. Rejected changes are documented with the reason and the risk they carry into the build. The agent will not compensate for a process problem the client chose not to fix.</li>
+                    <li>Every element of the use case definition that follows is written against the agreed to-be process — not the current one. If the team drifts back to defining the use case around current behavior, the facilitator redirects.</li>
                     <li>Define the selected use case fully: which role it primarily serves, and what three to five specific questions it answers for them.</li>
                     <li>Specify the dimensions it must support: by plant, by line, by machine, by shift, by product family.</li>
                     <li>Specify the time windows it must cover: today, this shift, this week, last 30 days, last quarter.</li>
@@ -121,6 +130,10 @@
                     <li>Is there an internal champion who will own this use case through the build phase?</li>
                     <li>Are there concerns about data ownership, system access, or organizational approvals that would slow delivery?</li>
                     <li>Which candidate has the clearest executive support from the Day 1 charter?</li>
+                    <li>What is structurally broken about how this decision is made today — not the symptoms, but the root cause of why it fails repeatedly?</li>
+                    <li>If this decision process were redesigned knowing an AI agent would support it, what would change in the human steps — not just what the agent does?</li>
+                    <li>Which of the proposed process changes does the client team own, and can they be in place before build begins?</li>
+                    <li>Is the team willing to commit to the process changes the optimized design requires, or is the goal to automate the current process as-is? If the latter, the team should understand what that limits.</li>
                     <li>Which role does this use case serve first: and what specific question should it answer within the first 30 seconds of use?</li>
                     <li>At what level does the answer need to be available: plant, area, line, machine, shift?</li>
                     <li>What time windows matter most: real time, daily, weekly, or trend-based?</li>
@@ -147,6 +160,8 @@
                     <li>Use case definition canvas: persona, questions answered, dimensions, time windows, and outcome format. Pre-structured so the team fills blanks, not designs structure.</li>
                     <li>Golden sample capture template: a structured prompt that guides the team to articulate a complete example agent response: including trigger, data used, recommendation produced, and what action it enables.</li>
                     <li>Success criteria template: 30-day, 90-day, and 180-day improvement targets over the Day 1 baseline.</li>
+                    <li>As-is decision process summary: IBM-prepared one-page failure mode assessment per shortlisted candidate, synthesized from Day 1. Shows current decision steps, where they fail, structural causes, and cost estimate. Brought by IBM into the session — not built in the room.</li>
+                    <li>To-be process recommendation: IBM-prepared recommended optimized decision process per top candidate. Shows what changes in the human steps, what the agent enables, and what the client must commit to before build begins. Benchmarked against comparable plant deployments where available.</li>
                   </ul>
                 </div>
               </div>
@@ -160,6 +175,7 @@
                   <li>Time window list: the look-back and look-forward periods the answer must cover.</li>
                   <li>Agreed success criteria with baseline comparison at 30, 90, and 180 days.</li>
                   <li>Golden sample: one fully described example of a perfect agent response, agreed by the room.</li>
+                  <li>Agreed to-be decision process: the optimized decision flow the use case will be built on, with each step documented, changes from as-is explicitly called out, and the specific process commitments the client makes before build begins. Signed by Operations Head and Plant Manager.</li>
                 </ul>
               </div>
             </div>
@@ -253,6 +269,7 @@
           <div class="end-card">Golden sample: one fully described perfect agent response</div>
           <div class="end-card">Interface specification and trust signal design</div>
           <div class="end-card">Change impact summary and named adoption champion</div>
+          <div class="end-card">Agreed to-be decision process with client process commitments before build</div>
         </div>
       </div>
 

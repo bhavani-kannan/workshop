@@ -44,6 +44,7 @@
                     <li>For each scenario that produces a partial or failed result, classify the root cause immediately: a gap in the decision logic, a metric definition gap, a missing concept, a data gap, a broken MES-to-ERP correlation, or a wrong assumption.</li>
                     <li>Resolve gaps on the spot where possible: refine the logic, metric, concept, or alert priority framework in the room. Log items that require additional design work with an owner and resolution date.</li>
                     <li>Assign an overall confidence rating to the full design specification: high, medium, or conditional: with the specific conditions stated.</li>
+                    <li>Observe whether participants reason from the agreed to-be process or default to current as-is behavior during the walkthrough. Defaulting to as-is is not a design failure — it is a change management signal. Log it and feed it into the adoption plan rather than treating it as a gap in the agent design.</li>
                   </ul>
                 </div>
 
@@ -59,6 +60,7 @@
                     <li>For each failed result: is the failure caused by a logic gap, a metric issue, a missing concept, a data quality problem, or a broken MES-to-ERP link?</li>
                     <li>Which gaps can be resolved today and which need additional design work before build begins?</li>
                     <li>What is the team's honest confidence that this design will perform reliably on the plant floor at launch?</li>
+                    <li>During the walkthrough, did participants make decisions based on the to-be process or based on current habits? Where they defaulted to as-is, what does that tell us about what the change management plan needs to address before go-live?</li>
                   </ul>
                 </div>
 

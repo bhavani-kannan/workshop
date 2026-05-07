@@ -10,8 +10,11 @@
         <p>
           Define the complete design specification: the metrics the agent measures, each grounded in the
           current performance baseline; the decision logic it applies including how it correlates MES and
-          ERP signals; the concepts and filter rules it uses; and the constraints, approval rules, and
-          guardrails it operates within. Everything agreed today goes directly into the build brief.
+          ERP signals; the time windows and filter rules it uses; and the constraints, approval rules, and
+          guardrails it operates within. Every metric, rule, and threshold is designed against the
+          to-be process agreed on Day 2 — not how decisions are currently made. Where the team defaults
+          to current practice during design, the facilitator flags it and refers back to the Day 2 agreement.
+          Everything agreed today goes directly into the build brief.
           The executive summary brief for Day 5 endorsement is drafted at the end of this day.
         </p>
       </div>
@@ -118,6 +121,7 @@
                     <li>Define explainability requirements: what does the agent show the operator to explain how it reached its recommendation? A full reasoning trace, a summary of the top contributing factors, or a confidence score only?</li>
                     <li>Define the agent capability set: every operation the agent can perform as part of its reasoning. Separate read operations (query MES downtime events, retrieve ERP MRP exceptions, calculate OEE, fetch SOP document) from write operations (send alert, update ERP reason code, trigger ERP rescheduling). Write operations require an explicit authorization owner and an HITL or HOTL classification from earlier in this session.</li>
                     <li>Run a golden sample validation: use the golden sample agreed on Day 2 to verify that the decision logic and metric definitions, as designed today, would produce that result. If they would not, identify what needs to change.</li>
+                    <li>Verify that each decision rule reflects the to-be process agreed on Day 2. Where a rule replicates a step from the current broken process rather than the optimized one, flag it and correct it before it enters the build brief.</li>
                   </ul>
                 </div>
 
@@ -133,6 +137,7 @@
                     <li>What does the operator see when the agent produces a recommendation: and is that enough for them to understand why, act confidently, and feel responsible for the outcome?</li>
                     <li>How long must the recommendation log be retained, and who audits it?</li>
                     <li>Does the golden sample from Day 2 pass through today's decision logic as designed? If not, where does it break?</li>
+                    <li>Does each decision rule reflect the to-be process the client agreed on Day 2, or is it defaulting to current practice? Where is the design replicating a known broken step rather than the optimized one?</li>
                   </ul>
                 </div>
 

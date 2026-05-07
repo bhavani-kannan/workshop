@@ -12,6 +12,9 @@
           Then work through operations to understand how the plant actually runs, who makes which decisions,
           where the process breaks down, and what the current performance baseline looks like.
           Close the day by presenting findings back to executives for alignment before Day 2 begins.
+          IBM synthesizes the Day 1 observations overnight into a structured as-is assessment of each
+          shortlisted decision: the documented failure modes and their cost that open Day 2's
+          process optimization step.
         </p>
       </div>
 
@@ -111,6 +114,7 @@
                     <li>Surface MES exception patterns: which alarms are consistently ignored or overridden, how downtime reasons are logged, whether scrap and rework are captured accurately and on time.</li>
                     <li>Surface ERP symptom patterns: repeated MRP shortage messages, inventory figures that do not match physical reality, cost variances that finance resolves manually at month-end.</li>
                     <li>Identify where shop-floor fixes stay local and never feed back into planning, routing, or ERP logic.</li>
+                    <li>For each shortlisted decision, document the current decision process in structured terms: the steps as they actually happen, where they structurally fail, and what that failure costs the plant. This is not a pain point list — it is the failure mode analysis IBM synthesizes overnight and brings into Day 2 as the basis for the process optimization recommendation.</li>
                   </ul>
                 </div>
 
@@ -163,6 +167,7 @@
                   <li>MES exception patterns: alarms ignored, downtime reasons inaccurate, scrap logged late, local fixes not fed upstream.</li>
                   <li>ERP symptom patterns: repeated MRP messages, inventory mismatches, unexplained cost variances.</li>
                   <li>Initial decision inventory: 15 to 25 decisions, each with owner, trigger, data dependency, and outcome.</li>
+                  <li>As-is decision process assessment per shortlisted decision: current steps, failure modes, structural causes, and estimated cost. IBM synthesizes this overnight as the direct input to Day 2's process optimization step.</li>
                 </ul>
               </div>
             </div>
