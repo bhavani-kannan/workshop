@@ -23,9 +23,12 @@
       </p>
       <div class="workshop-promise">
         <p>
-          Each day produces a concrete output: a decision backlog, a selected use case, a data
-          readiness assessment, a decision model, and a validated implementation path.
-          No slide decks that sit on shelves.
+          Each day produces one core operational intelligence object. Together, these five objects capture
+          operational reality, decision intelligence, signal readiness, governance boundaries, and validation
+          evidence. They can be fed into Copilot or another LLM to generate the final Operational Playbook
+          and implementation blueprint. The BA's role is not to produce every document manually. It is to
+          extract the human judgment, tacit knowledge, trust dynamics, and operational deviations that no AI
+          can reliably infer from a transcript alone.
         </p>
       </div>
     </div>
@@ -53,36 +56,99 @@
       <div id="pre-workshop-body"></div>
     </div>
 
+    <!-- Neudesic methodology strip -->
+    <div class="methodology-strip" id="methodology-strip">
+      <div class="method-stage active" data-panels="panel-day1">
+        <span class="method-num">01</span>
+        <span class="method-label">Context Discovery</span>
+      </div>
+      <div class="method-stage" data-panels="panel-day2">
+        <span class="method-num">02</span>
+        <span class="method-label">Process Design</span>
+      </div>
+      <div class="method-stage" data-panels="panel-day3">
+        <span class="method-num">03</span>
+        <span class="method-label">Data Alignment</span>
+      </div>
+      <div class="method-stage" data-panels="panel-day4 panel-day5">
+        <span class="method-num">04</span>
+        <span class="method-label">Operational Synchronization</span>
+      </div>
+      <div class="method-stage" data-panels="panel-day5">
+        <span class="method-num">05</span>
+        <span class="method-label">Outcome Definition</span>
+      </div>
+    </div>
+
+    <!-- From Workshop Intelligence to Operational Playbook -->
+    <div class="playbook-flow" id="playbook-flow">
+      <div class="playbook-flow-label">From Workshop Intelligence to Operational Playbook</div>
+      <div class="playbook-flow-strip">
+        <div class="playbook-flow-card">
+          <span class="playbook-flow-day">Day 1</span>
+          <span class="playbook-flow-name">Operational Context Register</span>
+        </div>
+        <span class="playbook-flow-sep">+</span>
+        <div class="playbook-flow-card">
+          <span class="playbook-flow-day">Day 2</span>
+          <span class="playbook-flow-name">Decision Intelligence Register</span>
+        </div>
+        <span class="playbook-flow-sep">+</span>
+        <div class="playbook-flow-card">
+          <span class="playbook-flow-day">Day 3</span>
+          <span class="playbook-flow-name">Operational Signal and Data Readiness Register</span>
+        </div>
+        <span class="playbook-flow-sep">+</span>
+        <div class="playbook-flow-card">
+          <span class="playbook-flow-day">Day 4</span>
+          <span class="playbook-flow-name">Agent Governance and Orchestration Register</span>
+        </div>
+        <span class="playbook-flow-sep">+</span>
+        <div class="playbook-flow-card">
+          <span class="playbook-flow-day">Day 5</span>
+          <span class="playbook-flow-name">Validation and Transformation Readiness Register</span>
+        </div>
+        <span class="playbook-flow-sep">=</span>
+        <div class="playbook-flow-card playbook-flow-final">
+          <span class="playbook-flow-day">Output</span>
+          <span class="playbook-flow-name">Operational Playbook and Implementation Blueprint</span>
+        </div>
+      </div>
+      <div class="transformation-backlog-note">
+        <strong>Transformation Backlog</strong> - evolves across all five days. Captures deferred automation opportunities, process standardization needs, data remediation items, non-agentizable decisions, governance gaps, and future-phase candidates. Nothing agreed in the room is lost; it is classified and carried forward.
+      </div>
+    </div>
+
     <!-- Tab navigation -->
     <div class="tab-nav" id="tab-nav" role="tablist">
 
       <button class="tab-btn active" data-panel="panel-day1" role="tab" aria-selected="true" aria-controls="panel-day1">
         <span class="tab-day-label">Day 1</span>
-        <span class="tab-day-title">Identify Critical Manufacturing Decisions</span>
+        <span class="tab-day-title">Decision Discovery</span>
         <span class="tab-session-count">3 sessions</span>
       </button>
 
       <button class="tab-btn" data-panel="panel-day2" role="tab" aria-selected="false" aria-controls="panel-day2">
         <span class="tab-day-label">Day 2</span>
-        <span class="tab-day-title">Select the Priority Use Case</span>
+        <span class="tab-day-title">Use Case Selection</span>
         <span class="tab-session-count">3 sessions</span>
       </button>
 
       <button class="tab-btn" data-panel="panel-day3" role="tab" aria-selected="false" aria-controls="panel-day3">
         <span class="tab-day-label">Day 3</span>
-        <span class="tab-day-title">Map Data Ownership, Availability, and Gaps</span>
+        <span class="tab-day-title">Data Alignment</span>
         <span class="tab-session-count">3 sessions</span>
       </button>
 
       <button class="tab-btn" data-panel="panel-day4" role="tab" aria-selected="false" aria-controls="panel-day4">
         <span class="tab-day-label">Day 4</span>
-        <span class="tab-day-title">Define Metrics, Decision Logic, and Constraints</span>
+        <span class="tab-day-title">Decision Design</span>
         <span class="tab-session-count">3 sessions</span>
       </button>
 
       <button class="tab-btn" data-panel="panel-day5" role="tab" aria-selected="false" aria-controls="panel-day5">
         <span class="tab-day-label">Day 5</span>
-        <span class="tab-day-title">Validate Scenarios and Define Next Steps</span>
+        <span class="tab-day-title">Validation and Sign-Off</span>
         <span class="tab-session-count">3 sessions</span>
       </button>
 
@@ -91,11 +157,12 @@
     <!-- Day 1 panel -->
     <div class="tab-panel active" id="panel-day1" role="tabpanel">
       <div class="panel-header">
-        <span class="panel-tagline">Opens with executive alignment, works through operations, closes with an executive debrief for buy-in.</span>
+        <span class="panel-tagline">Opens with executive alignment, works through operations, closes with an executive debrief. Produces the Operational Context Register: structured record of how the plant actually runs and what experienced operators know that no system captures.</span>
+        <div class="stage-pill">Context Discovery</div>
         <div class="panel-chips">
-          <div class="outcome-chip">Workshop charter (executive agreed)</div>
-          <div class="outcome-chip">Role profiles, baseline metrics, and plant vocabulary</div>
-          <div class="outcome-chip">Decision inventory and priority shortlist</div>
+          <div class="outcome-chip">Operational Context Register</div>
+          <div class="outcome-chip">Workshop charter (executive signed)</div>
+          <div class="outcome-chip">Tacit knowledge register v1 with agentizability classifications</div>
         </div>
       </div>
       <div id="day1-body"></div>
@@ -104,12 +171,12 @@
     <!-- Day 2 panel -->
     <div class="tab-panel" id="panel-day2" role="tabpanel">
       <div class="panel-header">
-        <span class="panel-tagline">Assess how the priority decision is currently made, agree on the optimized process, then define the use case against that improved foundation — not the current one.</span>
+        <span class="panel-tagline">Select the use case, agree on the optimized process it should be built on, and fully define what the agent must answer, for whom, and within what boundaries. Produces the Decision Intelligence Register.</span>
+        <div class="stage-pill">Process Design</div>
         <div class="panel-chips">
-          <div class="outcome-chip">Scored use case matrix with golden sample</div>
-          <div class="outcome-chip">Agreed to-be decision process with client process commitments</div>
-          <div class="outcome-chip">Selected use case: questions, dimensions, time windows</div>
-          <div class="outcome-chip">Interface specification and adoption champion</div>
+          <div class="outcome-chip">Decision Intelligence Register</div>
+          <div class="outcome-chip">Golden sample and use case definition</div>
+          <div class="outcome-chip">To-be process agreement with client commitments (signed)</div>
         </div>
       </div>
       <div id="day2-body"></div>
@@ -118,11 +185,12 @@
     <!-- Day 3 panel -->
     <div class="tab-panel" id="panel-day3" role="tabpanel">
       <div class="panel-header">
-        <span class="panel-tagline">Confirm who owns each data source, what is accessible, and what gaps must be resolved before design begins.</span>
+        <span class="panel-tagline">Determine whether the operational behavior identified in Days 1 and 2 can actually be observed through systems and signals. Surface shadow systems, data trust gaps, and the difference between what the system shows and what operators know. Produces the Operational Signal and Data Readiness Register.</span>
+        <div class="stage-pill">Data Alignment</div>
         <div class="panel-chips">
-          <div class="outcome-chip">Data ownership map with owners and MES-to-ERP flow gaps</div>
-          <div class="outcome-chip">Data availability assessment, gap register, and readiness rating</div>
-          <div class="outcome-chip">Signed data commitment with confirmed system inventory</div>
+          <div class="outcome-chip">Operational Signal and Data Readiness Register</div>
+          <div class="outcome-chip">Shadow system and data trust inventory</div>
+          <div class="outcome-chip">Data commitment document (signed)</div>
         </div>
       </div>
       <div id="day3-body"></div>
@@ -131,11 +199,12 @@
     <!-- Day 4 panel -->
     <div class="tab-panel" id="panel-day4" role="tabpanel">
       <div class="panel-header">
-        <span class="panel-tagline">Define what is measured, how the agent makes decisions, who stays in control, and what it must never do.</span>
+        <span class="panel-tagline">Define what the agent may do, what it must never do, where human approval is required, and what it must always explain and log. Produces the Agent Governance and Orchestration Register.</span>
+        <div class="stage-pill">Operational Synchronization</div>
         <div class="panel-chips">
-          <div class="outcome-chip">Metric catalogue with baselines and calculation logic</div>
-          <div class="outcome-chip">Decision rules, human oversight classification, and audit requirements</div>
-          <div class="outcome-chip">Operating limits, approval rules, and draft executive brief</div>
+          <div class="outcome-chip">Agent Governance and Orchestration Register</div>
+          <div class="outcome-chip">Metric catalogue with plant baselines (signed)</div>
+          <div class="outcome-chip">Decision logic specification and HITL/HOTL classification</div>
         </div>
       </div>
       <div id="day4-body"></div>
@@ -144,11 +213,12 @@
     <!-- Day 5 panel -->
     <div class="tab-panel" id="panel-day5" role="tabpanel">
       <div class="panel-header">
-        <span class="panel-tagline">Validate the design against real scenarios, obtain stakeholder sign-offs, and secure executive endorsement of the roadmap.</span>
+        <span class="panel-tagline">Test the full design against real plant scenarios, confirm readiness or surface remaining gaps, and close with stakeholder sign-offs and executive endorsement. Produces the Validation and Transformation Readiness Register.</span>
+        <div class="stage-pill">Operational Synchronization / Outcome Definition</div>
         <div class="panel-chips">
-          <div class="outcome-chip">Validated scenarios with confidence rating</div>
-          <div class="outcome-chip">Production monitoring and feedback capture plan</div>
-          <div class="outcome-chip">Sign-offs, change management plan, and executive endorsement</div>
+          <div class="outcome-chip">Validation and Transformation Readiness Register</div>
+          <div class="outcome-chip">Agent governance charter (signed) and production monitoring plan</div>
+          <div class="outcome-chip">Implementation roadmap and executive endorsement</div>
         </div>
       </div>
       <div id="day5-body"></div>
@@ -169,6 +239,16 @@
       var btns   = document.querySelectorAll('.tab-btn');
       var panels = document.querySelectorAll('.tab-panel');
 
+      function updateMethodStrip(panelId) {
+        document.querySelectorAll('.method-stage').forEach(function (stage) {
+          var assigned = (stage.dataset.panels || '').split(' ');
+          stage.classList.toggle('active', assigned.indexOf(panelId) !== -1);
+        });
+      }
+
+      // Initialise strip on Day 1
+      updateMethodStrip('panel-day1');
+
       // Tab switching
       btns.forEach(function (btn) {
         btn.addEventListener('click', function () {
@@ -186,6 +266,7 @@
           this.classList.add('active');
           this.setAttribute('aria-selected', 'true');
           document.getElementById(targetId).classList.add('active');
+          updateMethodStrip(targetId);
 
           // Scroll to top of nav if below viewport
           var rect = nav.getBoundingClientRect();
